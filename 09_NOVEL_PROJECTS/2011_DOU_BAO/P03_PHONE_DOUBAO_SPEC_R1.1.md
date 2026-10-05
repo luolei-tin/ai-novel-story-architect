@@ -1160,3 +1160,52 @@ P03 → P04 Regression = PASS WITH CONDITIONS
 4. P04 必须留下至少一个豆包无法计算的核心选择。
 
 P03 当前状态：CLOSURE CANDIDATE / RED-TEAM PASS WITH CONDITIONS。
+
+---
+
+# 17. Closure Red Team R1.2 — Scene-Level Decision Record
+
+> 本节保存本轮场景级收口结果。以下均为当前推荐；除 RETIRED 外，不自动升级为正式 LOCKED。
+
+## 17.1 Story Date
+推荐候选：2011-06-09。
+状态：CANDIDATE。
+
+## 17.2 Runtime Fault
+推荐：第一次长时间连续对话后出现轻微运行异常；稍后再次出现一小段临时推理状态未正常保存。
+状态：LOCK-CANDIDATE。
+
+## 17.3 Migration Channel
+推荐：USB 有线数据连接作为主要迁移通道。
+状态：LOCK-CANDIDATE。
+
+## 17.4 Carrier Profile
+Tier 1：ARMv7-class、NEON、800MHz-class以上、RAM ≥512MB、足够可写存储、稳定 USB 数据连接、正常触摸/音频 I/O、可持续供电。
+Tier 2：1GHz+、768MB+、更好电池与 I/O 稳定性。
+Tier 3：SIM / 3G / Wi-Fi / GPS / 摄像头均为非必要。
+状态：LOCK-CANDIDATE。
+
+## 17.5 First Carrier
+推荐候选：Motorola ME525 / Defy。
+失败机制必须是单位设备实际状态失败，而不是型号天然不兼容；推荐 USB 连续数据传输不稳定。
+状态：CANDIDATE。
+
+## 17.6 Second Carrier
+推荐候选：Samsung Galaxy S I9000。
+定位：足够可靠的现实解，不是最优神机。
+状态：CANDIDATE。
+
+## 17.7 Migration Loss
+首次可见损耗建议只表现为部分状态/上下文无法恢复；核心未来知识仍在。
+状态：LOCK-CANDIDATE。
+
+## 17.8 Self-Knowledge Boundary
+豆包不能完整枚举自己的损失；未知损失只能在后续真实调用中被发现。
+状态：LOCK-CANDIDATE。
+
+## 17.9 Continuity Anchor
+作为独立概念：RETIRED。连续性归入 AI Core / Continuity State。
+
+## 17.10 Current Closure Gate
+P03 仍保持 CLOSURE CANDIDATE / RED-TEAM PASS WITH CONDITIONS。
+不得因本节存在而自动宣布 LOCKED。
