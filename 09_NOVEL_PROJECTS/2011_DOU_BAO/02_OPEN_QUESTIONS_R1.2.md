@@ -529,3 +529,36 @@ D. 其他第三方案
 
 ### P04-R05｜豆包在志愿问题上的边界
 允许分析，不允许给出“人生最优答案”。
+---
+
+# 6. P03 Closure Scene-Level Status R1.2
+
+| ID | Current Status | Note |
+|---|---|---|
+| Story Date 2011-06-09 | CANDIDATE | 推荐日期，尚未正式 LOCK |
+| Q-008 2026手机长期维持 | LOCK-CANDIDATE | 保持黑箱边界，不以 Type-C 单因解释 |
+| Q-009 迁移技术 | LOCK-CANDIDATE | USB 作为主要迁移通道；底层协议仍不展开 |
+| Q-011 迁移损耗 | LOCK-CANDIDATE | 首次可见损耗为状态/上下文缺失 |
+| Q-012 “另一部分” | RETIRED | 禁止独立碎片/另一半升级线 |
+| Q-013 多个豆包 | LOCK-CANDIDATE | 只允许一个连续存在的豆包 |
+| Q-014 豆包人格 | OPEN | 后期另行处理 |
+| P03-R01 第一台失败设备 | CANDIDATE | ME525/Defy；单位设备 USB 数据稳定性失败 |
+| P03-R02 第二台成功设备 | CANDIDATE | Samsung Galaxy S I9000 |
+| P03-R03 迁移具体损失 | LOCK-CANDIDATE | 首次表现为部分状态/上下文无法恢复 |
+| P03-R04 迁移后第一次异常 | LOCK-CANDIDATE | 用场景证明“豆包仍在但不再完整” |
+| Continuity Anchor | RETIRED | 连续性归入 AI Core / Continuity State |
+
+> 说明：以上状态用于保存本轮工作结论。除 RETIRED 外，除非另有明确确认，不得在正文中当作最终 LOCKED Canon。
+
+# 7. P03 → P04 Gate
+
+P03 不得因本轮补充而直接宣布 LOCKED。
+
+进入 P04 前仍需：
+1. 确认 Story Date；
+2. 确认 ME525 / I9000 设备组合；
+3. 确认 USB 主通道；
+4. 确认首次迁移损失表现；
+5. 完成 P03 → P04 Regression Check。
+
+P04 必须保留至少一个豆包无法计算的核心选择。
