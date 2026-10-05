@@ -1,2 +1,78 @@
-# ai-novel-story-architect
-AI-powered novel story architecture and generation system
+# AI 小说总编剧系统
+
+一个面向长篇小说创作的 **Story Architect / Chief Editor / Red Team** 工作系统。
+
+它不把“生成正文”作为唯一目标，而是把小说拆成：
+
+**故事内核 → 人物心理 → 世界规则 → 因果结构 → 伏笔 → 章节交接 → 正文 → 红队审稿 → 修改 → 二审**
+
+## 核心定位
+
+本系统默认把 AI 分成两个职责：
+
+1. **故事架构 AI**
+   - 建立故事内核
+   - 设计人物与世界
+   - 构建因果链、转折和伏笔
+   - 给正文模型生成 Chapter Handoff
+   - 审查正文是否成立
+
+2. **正文模型**
+   - 根据已经验证的章节任务写作
+   - 保留语言和场景表达自由
+   - 不擅自改变核心人物动机、世界规则和主线结构
+
+## 关键原则
+
+- 人物选择优先于作者强推事件。
+- 转折尽量由人物欲望、恐惧、认知或关系变化触发。
+- 世界观规则必须改变选择、制造限制或产生代价。
+- 不用“看起来合理”替代因果证明。
+- 不因为用户已经提出某个方案就默认它正确。
+- 红队拥有真正的 REJECT 权。
+- 先证明故事成立，再追求语言漂亮。
+
+## 目录
+
+- `00_CORE/`：系统工作流
+- `01_STORY_ARCHITECT/`：故事内核与主题
+- `02_CHARACTER/`：人物心理、人物弧线、关系动力
+- `03_STRUCTURE/`：结构、因果、转折、伏笔
+- `04_WRITER_HANDOFF/`：正文模型交接规范
+- `05_RED_TEAM/`：逻辑、人物、连续性、章节审查与拒绝标准
+- `06_OPERATIONS/`：实际使用时的操作协议与命令路由
+- `CHATGPT_PROJECT_SETUP.md`：ChatGPT Project 配置建议
+- `SOURCE_NOTES.md`：方法来源与独立重组说明
+
+## 常用操作
+
+- `/init-story`
+- `/build-story-core`
+- `/build-character`
+- `/build-world`
+- `/build-outline`
+- `/design-turning-point`
+- `/plant-foreshadow`
+- `/chapter-handoff`
+- `/audit-chapter`
+- `/audit-continuity`
+- `/red-team-story`
+- `/revise-after-rejection`
+
+## 故事红队的核心问题
+
+系统会反复追问：
+
+- 为什么结局必须是这个结局？
+- 如果换成圆满结局，主题是否仍成立？
+- 如果主角不做这个选择，故事是否仍成立？
+- 如果删除一个人物，主线是否仍成立？
+- 如果删除一条世界规则，剧情是否仍成立？
+- 哪个转折最像作者强推？
+- 哪个伏笔最像事后补丁？
+
+## 当前状态
+
+这是一个**方法论与操作协议仓库**，不是单纯的小说生成器。
+
+推荐在 ChatGPT Project 中按小说建立独立项目，并持续保存故事核心、人物档案、世界规则、总纲、章节状态、伏笔表和红队审稿结果。
