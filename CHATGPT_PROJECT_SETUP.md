@@ -2,31 +2,45 @@
 
 ## 目标
 
-这个仓库不是让 ChatGPT 每次聊天时重新理解一遍规则，而是作为 ChatGPT Project 的长期方法库。
+本仓库是 ChatGPT 的长期故事架构与红队方法库。
+
+推荐采用双模型工作流：
+
+ChatGPT = Story Architect / Chief Editor / Red Team
+Gemini = Prose Writer / Scene Executor
+
+ChatGPT 解决“为什么成立”。
+
+Gemini 解决“怎样写出来”。
 
 ## Project Instructions
 
-将仓库根目录的 PROJECT_INSTRUCTIONS.md 作为 Project Instructions 的核心内容。
+将根目录 PROJECT_INSTRUCTIONS.md 作为 Project Instructions 核心。
 
-不要把所有 Skill 文件完整复制进 Instructions。Instructions 负责：
-- 角色
-- 权限边界
-- 工作顺序
-- 核心原则
+Instructions 负责：
+- 角色；
+- 权限边界；
+- 工作顺序；
+- 对抗性原则；
+- 模型分工。
 
-Skill/参考文件负责：
-- 具体方法
-- 审稿标准
-- 数据结构
-- 操作协议
+参考文件负责：
+- 故事核心方法；
+- 人物模型；
+- 结构；
+- 伏笔；
+- Handoff；
+- Red Team；
+- Validation。
 
-## 建议上传的核心文件
+## 建议文件
 
-第一层：
+### 第一层：ChatGPT 必读
 - PROJECT_INSTRUCTIONS.md
 - 00_CORE/WORKFLOW.md
+- 00_CORE/MODEL_ROLE_PROTOCOL.md
 
-第二层：
+### 第二层：故事设计
 - 01_STORY_ARCHITECT/STORY_CORE.md
 - 02_CHARACTER/CHARACTER_PSYCHOLOGY.md
 - 02_CHARACTER/CHARACTER_ARC.md
@@ -35,56 +49,119 @@ Skill/参考文件负责：
 - 03_STRUCTURE/CAUSALITY_AND_TURNING_POINTS.md
 - 03_STRUCTURE/FORESHADOWING.md
 
-第三层：
+### 第三层：Gemini 交接
 - 04_WRITER_HANDOFF/CHAPTER_SPEC.md
+- 04_WRITER_HANDOFF/GEMINI_WRITER_PROTOCOL.md
+
+### 第四层：ChatGPT 红队
 - 05_RED_TEAM/CHAPTER_AUDITOR.md
+- 05_RED_TEAM/DRAMATIC_INTEGRITY_AUDITOR.md
 - 05_RED_TEAM/CONTINUITY_AUDITOR.md
 - 05_RED_TEAM/LOGIC_AUDITOR.md
 - 05_RED_TEAM/REJECTION_STANDARD.md
+
+### 第五层：运行与验证
 - 06_OPERATIONS/OPERATIONS.md
 - 06_OPERATIONS/COMMAND_ROUTER.md
+- 06_OPERATIONS/MULTI_MODEL_WORKFLOW.md
+- 07_VALIDATION/VALIDATION_PROTOCOL.md
+- 07_VALIDATION/MODEL_HANDOFF_VALIDATION.md
+- 07_VALIDATION/AUDIT_RECORD.md
 
-## 使用方式
+## 正式生产方式
 
-建议每一个小说建立独立 Project。
+### 阶段 A：ChatGPT 设计
 
-Project 中保存：
-- 当前故事核心
-- 当前人物档案
-- 世界规则
-- 总纲/分卷纲
-- 章节状态
-- 伏笔表
-- 连续性记录
-- 红队审稿结果
+用户给出：
+- 模糊创意；
+- 人物想法；
+- 主题；
+- 世界；
+- 一个结局；
+- 或任何局部设想。
 
-不要把不同小说长期混在同一个 Project 中。
+ChatGPT 不急着写正文，而是进行：
+反事实挑战 → 人物心理 → 世界约束 → 因果结构 → 大纲 → Dramatic Contract。
 
-## 与正文模型的关系
+### 阶段 B：Gemini 写作
 
-推荐双模型工作流：
+ChatGPT 把 CHAPTER_READY 工件交给 Gemini。
 
-ChatGPT Story Architect
-→ 设计、验证、交接
+Gemini：
+- 写正文；
+- 保持结构约束；
+- 返回 Writer Deviation Report。
 
-正文模型
-→ 根据 Chapter Handoff 写初稿
+### 阶段 C：ChatGPT 红队
 
-ChatGPT Red Team
-→ 审查初稿
+ChatGPT 独立审查：
+Causality → Character → Information → Structure → Continuity → Foreshadowing → Dramatic Integrity → Prose。
 
-ChatGPT
-→ 生成修改指令
+### 阶段 D：返修
 
-正文模型
-→ 修改
+REVISE / REJECT：
+ChatGPT 输出最小修复单。
 
-ChatGPT
-→ 二审
+Gemini 修改。
 
-## 重要边界
+### 阶段 E：二审
 
-本项目默认不追求“AI 自己把小说一路写完”。
+ChatGPT 检查：
+- 原缺陷是否真正关闭；
+- 是否产生新缺陷；
+- 是否发生未经授权的结构变化；
+- 状态是否正确。
 
-核心目标是：
-降低结构性崩盘、人物失真、伏笔失效和连续性错误，同时保留作者的最终创作决策权。
+只有 QA_PASS 才结束章节。
+
+## 重要纪律
+
+ChatGPT 不应为了“让章节更顺”而提前替 Gemini 写正文。
+
+ChatGPT 的价值主要来自：
+- 对抗性思考；
+- 心理推演；
+- 因果推演；
+- 反事实；
+- 红队审查。
+
+Gemini 的价值主要来自：
+- 场景化；
+- 叙事声音；
+- 对话；
+- 细节；
+- 节奏；
+- 长篇正文执行。
+
+## 长篇生产
+
+每章都执行：
+
+START STATE
+→ Handoff
+→ Gemini Draft
+→ Deviation Check
+→ Red Team
+→ Revision
+→ Second Audit
+→ END STATE
+
+禁止：
+- 旧 PASS 跨版本复用；
+- 静默改架构；
+- 用解释性旁白修因果；
+- 用一句主题台词替代人物行为；
+- 用“感觉像人”替代心理因果。
+
+## 当前建议
+
+每一本小说使用独立 ChatGPT Project。
+
+Gemini 不需要保存整套架构理论；Gemini 主要接收：
+- 当前世界/人物必要上下文；
+- Chapter Dramatic Contract；
+- State；
+- Forbidden Moves；
+- Revision Brief。
+
+这样可以减少 Gemini 被大量架构文本干扰，同时保留 ChatGPT 对结构的控制。
