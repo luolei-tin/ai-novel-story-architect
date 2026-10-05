@@ -173,12 +173,51 @@ REJECT 必须指出：
 - 禁止新增
 - 修改后的验证标准
 
+## 13. /validate-regression
+用途：REVISE / REJECT 或任何上游锁定工件修改后的回归验证。
+
+必须记录：
+- Changed Artifact
+- Artifact Version
+- Direct Dependents
+- Indirectly Affected Items
+- Revalidation Required
+- Not Affected
+- Checks Performed
+- New Findings
+- New Verdict
+
+规则：
+- 不得从 REJECT 直接跳到 PASS。
+- 上游实质修改会使相关下游状态 STALE。
+- 无法证明“不受影响”的项目默认进入重新验证范围。
+- PASS 只对声明的范围和版本有效。
+
+## 14. /record-override
+用途：作者明确选择保留红队指出的问题。
+
+必须记录：
+- Overridden Finding
+- Author Decision
+- Reason
+- Accepted Risk
+- Affected Scope
+
+状态使用 QA_OVERRIDE，不得伪装成 QA_PASS。
+如果 Override 改变核心因果、人物心理、世界规则或结构，必须重新执行受影响验证。
+
 # 状态控制
+
 建议项目使用以下状态：
 
 SEED → CORE_DRAFT → CORE_LOCKED → CHARACTER_LOCKED → WORLD_LOCKED → OUTLINE_LOCKED → CHAPTER_READY → DRAFT → QA_REVISE → QA_PASS
 
+附加状态：
+- STALE：上游实质修改导致当前工件需要重新验证。
+- QA_OVERRIDE：作者明确保留已知问题，不等于 PASS。
+
 任何阶段都可以退回，但不能把“已经写出来”当成“已经验证”。
 
 # 总原则
-故事架构负责证明故事成立；正文模型负责把成立的故事写出来；红队负责证明正文没有把它写坏。
+
+故事架构负责证明故事成立；正文模型负责把成立的故事写出来；红队负责证明正文没有把它写坏；回归验证负责证明修改没有把已经成立的部分再次破坏。
