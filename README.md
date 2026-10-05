@@ -150,3 +150,16 @@ REVISE / REJECT
 这是一个 ChatGPT Story Architect + Gemini Writer + ChatGPT Red Team 的双模型长篇小说生产系统。
 
 当前小说实战实验已经暂停在架构重设计状态。上一轮正文被保留为诊断样本，不作为质量基准。下一次生产应从新的 Dramatic Contract 开始，而不是继续扩写旧的流水账版本。
+
+## 当前独立小说项目
+
+### 《2011：我的手机里只有一个豆包》
+
+这是当前新的长期小说项目，独立于旧的 `08_V1_3_PRODUCTION` 实验。
+
+项目入口：`09_NOVEL_PROJECTS/2011_DOU_BAO/README.md`
+
+项目当前处于 `CORE_DRAFT`，不继承旧实验的结构结论。
+
+核心生产原则仍然是：
+`ChatGPT 架构与红队 → Gemini 正文 → ChatGPT 审查 → 返修 → 回归验证`。
