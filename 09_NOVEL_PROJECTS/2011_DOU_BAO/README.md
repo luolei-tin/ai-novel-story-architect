@@ -25,17 +25,42 @@ Gemini 对正文表达拥有自由，但不得静默改变已经锁定的核心�
 
 ## 当前状态
 
-`SEED → CORE_DRAFT`
+`CORE_DRAFT / CORE_RED_TEAM`
 
-本项目目前处于**架构设计期**，以下内容均可被审查、推翻、重构，不提前宣布为 LOCKED。
+P03：`CLOSURE CANDIDATE / NOT_LOCKED`
 
-## 目录
+当前不进入正文量产。
 
-- `00_PROJECT_STATUS_R1.0.md`：当前项目状态、决策、变更记录
-- `01_STORY_BIBLE_R1.0.md`：故事圣经候选版
-- `02_OPEN_QUESTIONS_R1.0.md`：必须继续解决的结构问题
-- `03_CHATGPT_DESIGN_PROTOCOL.md`：ChatGPT 在本小说中的具体工作方式
-- `04_GEMINI_HANDOFF_PROTOCOL.md`：交给 Gemini 写作时的边界
+## 当前权威文件
+
+### Current Canon
+
+- `00_PROJECT_STATUS_R1.2.md`：当前项目状态、决策、变更记录
+- `01_STORY_BIBLE_R1.1.md`：当前 Story Core 事实基线
+- `02_OPEN_QUESTIONS_R1.2.md`：当前未锁定问题
+- `P03_PHONE_DOUBAO_SPEC_R1.1.md`：当前 P03 工作基线
+
+### Governance
+
+- `03_CHATGPT_DESIGN_PROTOCOL.md`：ChatGPT 设计、审查与红队协议
+- `04_GEMINI_HANDOFF_PROTOCOL.md`：Gemini 写作交接协议
+
+### Working / Archive
+
+- `98_WORKING/`：当前仍在处理、尚未并入 Current Canon 的工作材料
+- `99_ARCHIVE/`：历史版本与已被替代的工件
+
+## 新对话读取原则
+
+默认读取：
+
+1. `01_STORY_BIBLE_R1.1.md`
+2. `00_PROJECT_STATUS_R1.2.md`
+3. `02_OPEN_QUESTIONS_R1.2.md`
+
+涉及具体模块时，再读取对应 Module Spec。
+
+`99_ARCHIVE/` 默认不作为当前 Canon 读取，只有追溯历史版本时才使用。
 
 ## 重要原则
 
