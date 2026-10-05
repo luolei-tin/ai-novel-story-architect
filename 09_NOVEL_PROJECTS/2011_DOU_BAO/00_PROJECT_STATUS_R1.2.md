@@ -351,3 +351,33 @@ P04 不得退化为“豆包计算志愿最优解”。陈默必须面对家庭�
 下一模块：`P04｜2011身份 / 家庭 / 填志愿`
 
 当前暂不进入正文生产，也暂不深入第一桶金、竞争者、感情线和终局。
+---
+
+# 21. P03 Closure Scene-Level Update R1.2
+
+## 当前判断
+P03 已完成本轮场景级 Closure Red Team，当前：CLOSURE CANDIDATE / RED-TEAM PASS WITH CONDITIONS。
+
+## 本轮新增候选结论
+- 故事日期推荐：2011-06-09（CANDIDATE）；
+- Runtime Fault：轻微、连续运行相关、不可精确倒计时（LOCK-CANDIDATE）；
+- USB：作为主要迁移数据通道（LOCK-CANDIDATE）；
+- Carrier Profile：Tier 1 / Tier 2 / Tier 3 分层（LOCK-CANDIDATE）；
+- 第一台失败候选：Motorola ME525 / Defy；要求单位设备实际失败而非型号天然不兼容（CANDIDATE）；
+- 第二台成功候选：Samsung Galaxy S I9000；定位为足够可靠的现实解而非神机（CANDIDATE）；
+- 首次迁移损耗：部分状态/上下文无法恢复，但核心未来知识仍在（LOCK-CANDIDATE）；
+- 豆包不能完整枚举自己的损失（LOCK-CANDIDATE）；
+- Continuity Anchor：作为独立概念 RETIRED。
+
+## 尚未锁定
+- 具体二手价格；
+- 具体购买地点/渠道；
+- 2026 手机长期命运；
+- 豆包后期人格；
+- 上述 CANDIDATE 是否正式升格为 LOCKED。
+
+## 下一模块准备
+完成一次 P03 → P04 Regression Check 后，进入 P04｜2011身份 / 家庭 / 填志愿。
+
+P04 核心红队问题：
+> 一个拥有 2026 人生记忆、18 岁身体和一个不完整豆包的陈默，为什么不会机械地直接选择计算机？
