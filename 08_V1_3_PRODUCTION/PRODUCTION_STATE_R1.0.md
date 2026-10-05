@@ -1,4 +1,4 @@
-# V1.3 Production State — R1.1
+# V1.3 Production State — R1.2
 
 ## Current Novel
 
@@ -6,49 +6,51 @@
 
 ## Current State
 
-`CORE_DRAFT`
+`CHAPTER_READY` for Chapter 1 only.
 
 ## Locked
 
 None.
 
-## Drafts Available
+## Validated Direction
 
-- V1.3 Experiment Charter R1.0
-- Novel Seed R1.0
-- Story Core Draft R1.0
-- Story Core Red-Team Audit R1.0
-- Character Draft R1.0
-- World Rules Draft R1.0
-- Relationship Dynamics Draft R1.0
+- Story Core remains a draft; the final choice is intentionally OPEN.
+- Mall necessity is provisionally closed at concept level.
+- Character draft establishes Zhou Heng's control-as-safety contradiction.
+- Lin Zhiyi is a non-substitutable relationship candidate pending prose evidence.
+- Commercial rules W1–W6 are operational constraints, not decorative lore.
+- First arc R1.1 is CONDITIONAL PASS and may enter Chapter 1 production.
 
-## Current Red-Team Status
+## Authorized Artifact
 
-`REVISE`
+`CHAPTER_01_HANDOFF_R1.0`
 
-Two HIGH issues from Story Core Red-Team remain formally open:
+## Not Authorized
 
-1. the old mall must be proven causally necessary rather than merely attractive;
-2. the final control-versus-safety choice must become structurally non-interchangeable.
+- Full-novel outline lock.
+- Final ending lock.
+- Chapter 2+ unrestricted production.
+- Reuse of any future chapter PASS as proof of this chapter.
 
-New drafts provide candidate repairs but have not yet been accepted as closure evidence.
+## Required Chapter 1 Flow
 
-## Next Gate
+START STATE
+→ prose draft
+→ Chapter Red-Team Audit
+→ Continuity Audit
+→ END STATE
+→ only then authorize Chapter 2.
 
-Before `CHARACTER_LOCKED` / `WORLD_LOCKED`:
+## Critical Evidence to Preserve
 
-1. prove why the old mall is the only viable first experiment for Zhou Heng;
-2. specify the exact operating arrangement;
-3. prove why the first three merchants accept the arrangement;
-4. define the first operational failure Zhou Heng cannot solve alone;
-5. define the commercial mechanism that later makes control and safety mutually exclusive;
-6. rerun Story Core Red-Team;
-7. only then lock character/world components.
+- 30,000 RMB starting cash.
+- 20,000 RMB performance deposit.
+- 10,000 RMB remaining liquidity.
+- partial and uncertain future memory.
+- 180-day operating-right window.
+- distinction between operating rights and ownership.
+- first visible merchant-trust variable.
 
-## Production Prohibition
+## Current Risk
 
-No Chapter 1 prose yet.
-
-No final ending lock yet.
-
-The story must earn its ending through the middle structure.
+The experiment succeeds only if the prose makes Zhou Heng's decision feel necessary because of constraints and character psychology, not because the narrator tells the reader that the mall will later become valuable.
