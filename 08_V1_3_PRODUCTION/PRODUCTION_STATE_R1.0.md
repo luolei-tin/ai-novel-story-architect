@@ -1,56 +1,35 @@
-# V1.3 Production State — R1.2
+# V1.3 Production State — R1.3
 
 ## Current Novel
-
 《重生后，我把一家旧商场做成了现金流》
 
 ## Current State
+Chapter 1 = CONDITIONAL PASS
 
-`CHAPTER_READY` for Chapter 1 only.
+## Chapter 1 Validation
+- Causality: no FATAL/HIGH finding.
+- Character: consistent with Zhou Heng's control/safety psychology.
+- Information integrity: no material future-knowledge leak detected.
+- Continuity: PASS.
+- Ending state: valid and irreversible.
 
-## Locked
+## Chapter 1 Known Risks
+- Future-value exposition is somewhat concentrated.
+- Lin Zhiyi's introduction is slightly efficient/thematic.
+These are prose-level risks, not structural blockers.
 
-None.
+## Current Authoritative State
+- liquid cash: approximately 10,000 RMB after 20,000 RMB deposit;
+- operating right: committed;
+- operating period: 180 days;
+- nearby market displacement window: approximately 90 days;
+- Zhou Heng has operating rights, not ownership;
+- future knowledge remains broad and uncertain;
+- Lin Zhiyi remains a utility relationship, not trusted partner.
 
-## Validated Direction
+## Next Gate
+Chapter 2 may proceed using CHAPTER_02_HANDOFF after state snapshot.
 
-- Story Core remains a draft; the final choice is intentionally OPEN.
-- Mall necessity is provisionally closed at concept level.
-- Character draft establishes Zhou Heng's control-as-safety contradiction.
-- Lin Zhiyi is a non-substitutable relationship candidate pending prose evidence.
-- Commercial rules W1–W6 are operational constraints, not decorative lore.
-- First arc R1.1 is CONDITIONAL PASS and may enter Chapter 1 production.
-
-## Authorized Artifact
-
-`CHAPTER_01_HANDOFF_R1.0`
-
-## Not Authorized
-
-- Full-novel outline lock.
-- Final ending lock.
-- Chapter 2+ unrestricted production.
-- Reuse of any future chapter PASS as proof of this chapter.
-
-## Required Chapter 1 Flow
-
-START STATE
-→ prose draft
-→ Chapter Red-Team Audit
-→ Continuity Audit
-→ END STATE
-→ only then authorize Chapter 2.
-
-## Critical Evidence to Preserve
-
-- 30,000 RMB starting cash.
-- 20,000 RMB performance deposit.
-- 10,000 RMB remaining liquidity.
-- partial and uncertain future memory.
-- 180-day operating-right window.
-- distinction between operating rights and ownership.
-- first visible merchant-trust variable.
-
-## Current Risk
-
-The experiment succeeds only if the prose makes Zhou Heng's decision feel necessary because of constraints and character psychology, not because the narrator tells the reader that the mall will later become valuable.
+## Production Discipline
+Do not reuse Chapter 1's conditional pass as evidence for Chapter 2.
+Every chapter must independently pass causality, character, information and continuity checks.
