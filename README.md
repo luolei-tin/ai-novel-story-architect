@@ -1,78 +1,152 @@
 # AI 小说总编剧系统
 
-一个面向长篇小说创作的 **Story Architect / Chief Editor / Red Team** 工作系统。
+一个面向长篇小说创作的 Story Architect / Chief Editor / Red Team 工作系统。
 
-它不把“生成正文”作为唯一目标，而是把小说拆成：
+它不是“一个 AI 把整本小说写完”的工作流，而是一套双模型生产系统：
 
-**故事内核 → 人物心理 → 世界规则 → 因果结构 → 伏笔 → 章节交接 → 正文 → 红队审稿 → 修改 → 二审**
+ChatGPT 负责想明白、质询、设计、审查。
+Gemini 负责把成立的设计写成正文。
 
-## 核心定位
+## 核心生产链
 
-本系统默认把 AI 分成两个职责：
+用户创意
+→ ChatGPT Story Architect
+→ Story Core
+→ Character Psychology
+→ World Constraints
+→ Causal Outline
+→ Foreshadowing
+→ Dramatic Contract
+→ Gemini Writer
+→ Writer Deviation Report
+→ ChatGPT Red Team
+→ Revision Brief
+→ Gemini Revision
+→ ChatGPT Second Audit
+→ QA_PASS
+→ State Update
+→ Next Chapter
 
-1. **故事架构 AI**
-   - 建立故事内核
-   - 设计人物与世界
-   - 构建因果链、转折和伏笔
-   - 给正文模型生成 Chapter Handoff
-   - 审查正文是否成立
+## ChatGPT 的核心价值
 
-2. **正文模型**
-   - 根据已经验证的章节任务写作
-   - 保留语言和场景表达自由
-   - 不擅自改变核心人物动机、世界规则和主线结构
+ChatGPT 不默认承担长篇正文生产。
 
-## 关键原则
+重点解决：
+- 故事为什么成立；
+- 结局为什么必须这样；
+- 如果换成另一个结局会怎样；
+- 人物为什么会做这个选择；
+- 如果主角拒绝会发生什么；
+- 反派为什么不会做更聪明的事；
+- 删除人物后哪条因果链断裂；
+- 删除世界规则后哪个选择消失；
+- 伏笔是否真正存在于此前文本；
+- 正文是否把正确的结构写坏。
 
-- 人物选择优先于作者强推事件。
-- 转折尽量由人物欲望、恐惧、认知或关系变化触发。
-- 世界观规则必须改变选择、制造限制或产生代价。
-- 不用“看起来合理”替代因果证明。
-- 不因为用户已经提出某个方案就默认它正确。
-- 红队拥有真正的 REJECT 权。
-- 先证明故事成立，再追求语言漂亮。
+## Gemini 的核心价值
+
+Gemini 负责：
+- 场景；
+- 对话；
+- 叙事声音；
+- 细节；
+- 节奏；
+- 情绪体验；
+- 长篇正文执行。
+
+Gemini 拥有表达自由，但不拥有结构主权。
+
+## 两个独立质量门槛
+
+故事不能因为“逻辑正确”就自动通过。
+
+每章必须同时满足：
+
+### Logical Integrity
+- Causality
+- Character
+- Information
+- Continuity
+- Foreshadowing
+
+### Dramatic Integrity
+- 当前目标；
+- 对立目标；
+- 筹码；
+- 信息差；
+- 战术；
+- 反转；
+- 关键选择；
+- 选择代价；
+- 关系/权力变化；
+- 下一问题。
+
+“事件 → 解释 → 主角顿悟 → 正确选择”如果反复出现，应直接进入 REVISE / REJECT。
+
+## 红队工作方式
+
+红队分两步：
+
+Pass A — Blind Prose Audit
+
+先只看正文：
+它到底发生了什么？
+人物到底想要什么？
+谁阻止谁？
+谁占优势？
+哪里真正发生了反转？
+谁做出了不可逆选择？
+
+不先为 ChatGPT 自己的 Handoff 辩护。
+
+Pass B — Baseline Comparison
+
+再拿正文对照：
+- Story Core
+- Character
+- World
+- Outline
+- Dramatic Contract
+- Long-Form State
+
+这样避免“设计者自己设计、自己解释、自己放过”。
+
+## 失败处理
+
+REVISE / REJECT
+→ Broken Chain
+→ Minimum Repair
+→ Gemini Revision
+→ Targeted Re-Audit
+→ Regression
+→ PASS
+
+作者可以 Override。
+但已知问题只能进入 QA_OVERRIDE，不能伪装成 QA_PASS。
 
 ## 目录
+- 00_CORE：系统核心与模型分工
+- 01_STORY_ARCHITECT：故事内核
+- 02_CHARACTER：人物心理与关系
+- 03_STRUCTURE：结构、因果、转折、伏笔
+- 04_WRITER_HANDOFF：Gemini 正文交接
+- 05_RED_TEAM：红队与拒绝标准
+- 06_OPERATIONS：生产流程与命令路由
+- 07_VALIDATION：状态、审计、回归
+- 08_V1_3_PRODUCTION：实际小说生产实验
 
-- `00_CORE/`：系统工作流
-- `01_STORY_ARCHITECT/`：故事内核与主题
-- `02_CHARACTER/`：人物心理、人物弧线、关系动力
-- `03_STRUCTURE/`：结构、因果、转折、伏笔
-- `04_WRITER_HANDOFF/`：正文模型交接规范
-- `05_RED_TEAM/`：逻辑、人物、连续性、章节审查与拒绝标准
-- `06_OPERATIONS/`：实际使用时的操作协议与命令路由
-- `CHATGPT_PROJECT_SETUP.md`：ChatGPT Project 配置建议
-- `SOURCE_NOTES.md`：方法来源与独立重组说明
+## 重要原则
+- 先证明故事成立，再写正文。
+- 人物选择优先于作者强推。
+- 世界规则必须真正限制选择。
+- 商业数字必须制造互斥选择，而不是充当教材。
+- 配角必须有独立目标。
+- 逻辑 PASS 不等于戏剧 PASS。
+- 上游修改必须触发受影响工件失效与回归验证。
+- 不把“写出来”当成“写对了”。
 
-## 常用操作
+## 当前定位
 
-- `/init-story`
-- `/build-story-core`
-- `/build-character`
-- `/build-world`
-- `/build-outline`
-- `/design-turning-point`
-- `/plant-foreshadow`
-- `/chapter-handoff`
-- `/audit-chapter`
-- `/audit-continuity`
-- `/red-team-story`
-- `/revise-after-rejection`
+这是一个 ChatGPT Story Architect + Gemini Writer + ChatGPT Red Team 的双模型长篇小说生产系统。
 
-## 故事红队的核心问题
-
-系统会反复追问：
-
-- 为什么结局必须是这个结局？
-- 如果换成圆满结局，主题是否仍成立？
-- 如果主角不做这个选择，故事是否仍成立？
-- 如果删除一个人物，主线是否仍成立？
-- 如果删除一条世界规则，剧情是否仍成立？
-- 哪个转折最像作者强推？
-- 哪个伏笔最像事后补丁？
-
-## 当前状态
-
-这是一个**方法论与操作协议仓库**，不是单纯的小说生成器。
-
-推荐在 ChatGPT Project 中按小说建立独立项目，并持续保存故事核心、人物档案、世界规则、总纲、章节状态、伏笔表和红队审稿结果。
+当前小说实战实验已经暂停在架构重设计状态。上一轮正文被保留为诊断样本，不作为质量基准。下一次生产应从新的 Dramatic Contract 开始，而不是继续扩写旧的流水账版本。
