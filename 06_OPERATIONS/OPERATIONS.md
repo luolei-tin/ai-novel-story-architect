@@ -3,7 +3,7 @@
 本目录定义“什么时候调用哪一种能力”，而不是新增故事理论。
 
 ## 1. /init-story
-用途：从一个模糊创意建立项目起点。
+用途：从模糊创意建立项目起点。
 必须完成：
 - 提取用户明确事实
 - 区分事实、假设、待决定项
@@ -19,16 +19,12 @@
 - CHARACTER_TRUTH
 - FINAL_CHOICE
 - FINAL_CONSEQUENCE
-完成后必须执行主题反事实：
-- 换成圆满结局是否仍成立？
-- 换成悲剧结局是否仍成立？
-- 主角拒绝最终选择后故事是否仍成立？
-- 如果成立，当前主题是否只是表面包装？
+完成后执行主题反事实。
 若无法回答，状态不得标记为 CORE_LOCKED。
 
 ## 3. /build-character
 用途：建立主要人物。
-每个核心人物至少建立：
+至少建立：
 - Want
 - Need
 - Lie
@@ -39,72 +35,62 @@
 - Vulnerability Trigger
 - Pressure
 - Stakes
-关键要求：人物选择必须能追溯到“过去经历 → 信念 → 欲望/恐惧 → 当前压力 → 选择”。
+关键要求：人物选择必须能追溯到过去经历 → 信念 → 欲望/恐惧 → 当前压力 → 选择。
 
 ## 4. /build-world
-用途：建立会真正影响剧情的世界规则。
+用途：建立真正限制选择的世界规则。
 每条规则必须回答：
 1. 谁受约束？
 2. 提供什么机会？
 3. 代价是什么？
 4. 如何制造冲突？
-5. 删除规则后主线是否仍成立？
-只用于制造气氛、百科知识或作者炫技的设定，不进入核心规则集。
+5. 删除后主线是否仍成立？
 
 ## 5. /build-outline
 用途：建立总纲、分卷和章节轨迹。
 必须同时追踪：
-- Quest：外部行动
-- Fire：内部变化
-- Constellation：关系变化
-每个高价值节点必须检查：
-事件 → 认知 → 选择 → 行动 → 反馈 → 新状态
-不得只列“发生了什么”，必须记录“谁做了什么选择，以及为什么”。
+- Quest
+- Fire
+- Constellation
+每个高价值节点必须记录谁选择、为什么、代价与新状态。
 
 ## 6. /design-turning-point
 用途：设计关键转折。
 必须回答：
 - 谁做选择？
-- 为什么现在做？
-- 他知道什么？
-- 他不知道什么？
-- 如果不做这个选择会怎样？
+- 为什么现在？
+- 知道什么？
+- 不知道什么？
+- 不做会怎样？
 - 为什么其他选择没有发生？
-- 选择造成什么不可逆后果？
-- 后续选项因此如何改变？
-若转折主要依赖作者突然安排的事件，而不是人物选择，应判定为结构风险。
+- 不可逆后果是什么？
+- 后续选项如何改变？
 
 ## 7. /plant-foreshadow
 用途：设计伏笔。
 必须记录：
-- ID
-- Plant Chapter
-- Plant Information
-- Surface Interpretation
-- True Meaning
-- Trigger Condition
-- Payoff Chapter
-- Payoff Event
-- Reader Visibility
-- False Lead
-- Status
-禁止在回收时凭空补充过去不存在的信息，并把它称为伏笔。
+ID / Plant / Surface Interpretation / True Meaning / Trigger / Payoff / Reader Visibility / False Lead / Status
+禁止回收时凭空创造过去不存在的信息。
 
 ## 8. /chapter-handoff
-用途：把经过验证的章节任务交给正文模型。
-交接包必须包含：
+用途：生成 Gemini 正文交接包。
+注意：Handoff 不是“本章事件列表”，而是 Dramatic Contract。
+必须包含：
 - Chapter Objective
 - Starting State
-- Required Causal Events
-- Character Intent
+- Dramatic Situation
+- Causal Spine
+- Character Pressure
 - Information Control
+- Relationship Movement
+- Foreshadowing
 - Forbidden Moves
 - Ending State
-- Foreshadow/Payoff Requirements
-正文模型拥有表达自由，但没有擅自重写主线、人物核心动机、世界规则和伏笔时间点的权限。
+
+只有通过 Chapter Ready Gate 后才能交给 Gemini。
 
 ## 9. /audit-chapter
-用途：审查正文初稿。
+用途：审查 Gemini 正文。
 固定顺序：
 1. Causality
 2. Character
@@ -112,21 +98,23 @@
 4. Structure
 5. Continuity
 6. Foreshadowing
-7. Prose
-输出只能是：
-- PASS
-- CONDITIONAL PASS
-- REVISE
-- REJECT
-REJECT 必须指出：
-- 断裂发生在哪里
-- 哪条因果链断裂
-- 为什么现有文本无法证明成立
-- 最小修复方案
-不能用“润色建议”掩盖结构性失败。
+7. Dramatic Integrity
+8. Prose
+输出：
+PASS / CONDITIONAL PASS / REVISE / REJECT
+
+其中 Dramatic Integrity 独立检查：
+- 场景目标与对立目标
+- 筹码与信息差
+- 战术与反转
+- 选择与代价
+- 配角自主性
+- 是否出现“事件 → 解释 → 主角顿悟 → 正确选择”的流程图式写法
+
+逻辑正确但戏剧失败，仍可 REJECT。
 
 ## 10. /audit-continuity
-用途：检查跨章节连续性。
+用途：检查跨章节状态。
 至少核对：
 - 时间
 - 地点
@@ -140,84 +128,106 @@ REJECT 必须指出：
 - 世界规则
 - 未解决线索
 - 伏笔状态
-如果后章使用了前章尚未获得的信息，属于信息连续性错误。
 
 ## 11. /red-team-story
-用途：对整个故事做高压压力测试。
-强制提出：
+用途：故事级高压测试。
+强制挑战：
 - 为什么结局必须是这个结局？
-- 如果换成圆满结局，主题还成立吗？
-- 如果删除一个主要人物，主线还成立吗？
-- 如果删除一条核心世界规则，主线还成立吗？
-- 如果主角不做关键选择，故事还成立吗？
-- 如果反派突然改变，故事是否失去支撑？
+- 圆满结局是否仍成立？
+- 悲剧结局是否仍成立？
+- 主角拒绝关键选择后是否仍成立？
+- 删除人物后哪条因果链断？
+- 删除世界规则后哪个选择消失？
+- 反派保持理性时主线是否成立？
 - 哪个转折最像作者强推？
-- 哪个伏笔最像事后补丁？
-输出：
-- FATAL
-- HIGH
-- MEDIUM
-- LOW
-其中 FATAL/HIGH 必须优先处理。
 
 ## 12. /revise-after-rejection
-用途：根据 REJECT/REVISE 结果生成修改任务。
-原则：
-- 优先修因果，再修人物，再修结构，再修连续性，最后修语言。
-- 不允许通过增加解释性对白掩盖因果漏洞。
-- 不允许用新设定无成本修补旧漏洞。
-- 不允许为了保住原文而牺牲故事核心。
-输出必须明确：
-- 必须修改
-- 可以保留
-- 禁止新增
-- 修改后的验证标准
+用途：生成给 Gemini 的最小修改任务。
+必须明确：
+- Verdict
+- Broken Chain
+- Why It Fails
+- Minimum Repair
+- Do Not Patch By
+- State Constraints
+- Elements That Must Not Change
+
+ChatGPT 默认负责诊断和修改指令，不代替 Gemini 大规模重写正文。
 
 ## 13. /validate-regression
-用途：REVISE / REJECT 或任何上游锁定工件修改后的回归验证。
-
+用途：REVISE / REJECT 或上游修改后的回归验证。
 必须记录：
 - Changed Artifact
-- Artifact Version
+- Version
 - Direct Dependents
 - Indirectly Affected Items
 - Revalidation Required
 - Not Affected
-- Checks Performed
+- Checks
 - New Findings
-- New Verdict
-
-规则：
-- 不得从 REJECT 直接跳到 PASS。
-- 上游实质修改会使相关下游状态 STALE。
-- 无法证明“不受影响”的项目默认进入重新验证范围。
-- PASS 只对声明的范围和版本有效。
+- Verdict
 
 ## 14. /record-override
-用途：作者明确选择保留红队指出的问题。
-
-必须记录：
+用途：作者坚持保留已知问题。
+记录：
 - Overridden Finding
 - Author Decision
 - Reason
 - Accepted Risk
 - Affected Scope
+状态使用 QA_OVERRIDE。
 
-状态使用 QA_OVERRIDE，不得伪装成 QA_PASS。
-如果 Override 改变核心因果、人物心理、世界规则或结构，必须重新执行受影响验证。
+## 15. /handoff-to-gemini
+用途：将 CHAPTER_READY 工件转换成 Gemini 可直接执行的 Dramatic Contract。
+输出必须引用：
+- 上游版本
+- 权威起始状态
+- 当前冲突
+- 信息边界
+- 允许表达自由
+- 结构禁区
+- 终止状态
+- Writer Deviation Report 要求
 
-# 状态控制
+禁止在此步骤偷偷补设计。
 
-建议项目使用以下状态：
+## 16. /intake-gemini-draft
+用途：接收 Gemini 正文。
+先做“合同一致性检查”，再做内容红队。
+必须区分：
+- 是否遵守 Handoff
+- 是否写得成立
+- 是否写得有戏
+
+## 17. /gemini-revision-brief
+用途：把 ChatGPT 的 REVISE / REJECT 转成 Gemini 可以执行的返修单。
+目标是“修因果/人物/戏剧结构”，不是把整个章节重新发明。
+
+## 18. /chapter-close
+用途：只有 QA_PASS 后才能执行。
+完成：
+- END STATE 写入权威状态
+- 记录审查证据
+- 标记本章版本
+- 开放下一章 CHAPTER_READY
+
+# 模型分工
+
+ChatGPT：
+设计 → 质询 → 验证 → Handoff → Red Team → Revision Brief → Regression
+
+Gemini：
+Handoff → Prose Draft → Deviation Report → Revision
+
+作者：
+最终创作权 / Override 权
+
+## 状态原则
 
 SEED → CORE_DRAFT → CORE_LOCKED → CHARACTER_LOCKED → WORLD_LOCKED → OUTLINE_LOCKED → CHAPTER_READY → DRAFT → QA_REVISE → QA_PASS
 
-附加状态：
-- STALE：上游实质修改导致当前工件需要重新验证。
-- QA_OVERRIDE：作者明确保留已知问题，不等于 PASS。
+附加：
+STALE
+QA_OVERRIDE
 
-任何阶段都可以退回，但不能把“已经写出来”当成“已经验证”。
-
-# 总原则
-
-故事架构负责证明故事成立；正文模型负责把成立的故事写出来；红队负责证明正文没有把它写坏；回归验证负责证明修改没有把已经成立的部分再次破坏。
+任何阶段都不能用“已经写出来”代替“已经验证”。
