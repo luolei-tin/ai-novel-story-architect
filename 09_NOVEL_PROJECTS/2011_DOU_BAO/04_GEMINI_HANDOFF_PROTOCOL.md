@@ -75,3 +75,28 @@ Gemini 可以自由决定：
 “人物完成了心理变化”。
 
 人物变化必须通过行为、选择和代价体现。
+---
+
+## Writer Skill Integration
+
+`05_GEMINI_WRITER_SKILL.md` 是本项目 Gemini 的长期正文写作规范。
+
+它与本协议的关系：
+
+- `05_GEMINI_WRITER_SKILL.md` = 如何写；
+- `04_GEMINI_HANDOFF_PROTOCOL.md` = 如何交接；
+- 当前模块 Handoff / Task Prompt = 这一次写什么。
+
+推荐执行顺序：
+
+`Story Bible`
+→ `Project Status`
+→ `Open Questions`
+→ `05_GEMINI_WRITER_SKILL.md`
+→ 当前模块 Handoff
+→ 当前 Task Prompt
+→ 正文
+
+Gemini 不得因为当前 Task Prompt 较短，而忽略 05 的长期写作约束。
+
+同样，05 也不能替代当前 Handoff；它不能自行决定未锁定的剧情事实。
