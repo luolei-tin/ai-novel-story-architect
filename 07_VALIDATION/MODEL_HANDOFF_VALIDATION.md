@@ -1,7 +1,7 @@
 # Model Handoff Validation Protocol
 
 ## Purpose
-��ֹ ChatGPT �Ľṹ����ڽ��� Gemini ������Ϣ��ʧ������Ư�ƻ�Ĭ�ع���
+防止 ChatGPT 的结构设计在交给 Gemini 后发生信息丢失、语义漂移或静默重构。
 
 ## Pre-Write Gate
 ChatGPT must verify:

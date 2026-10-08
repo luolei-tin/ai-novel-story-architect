@@ -1,26 +1,26 @@
 # Audit Record
 
-���ļ�������С����¼��ʽ��
+本文件定义最小审查记录格式。
 
 ## Required Fields
 
 ### Audit ID
-Ψһ����š�
+唯一审查编号。
 
 ### Artifact
-�����Ĺ��¹�����
+被审查的故事工件。
 
 ### Artifact Version
-�����汾��
+被审查版本。
 
 ### Upstream Baseline
-����������������ΰ汾��
+本次审查依赖的上游版本。
 
 ### Scope
-��ȷ���μ�鸲��ʲô��������ʲô��
+明确本次检查覆盖什么，不覆盖什么。
 
 ### Evidence
-�����¼��
+逐项记录：
 
 - Evidence ID
 - Location
@@ -30,7 +30,7 @@
 
 ### Findings
 
-ÿ�������¼��
+每项问题记录：
 
 - Severity: FATAL / HIGH / MEDIUM / LOW
 - Location
@@ -41,7 +41,7 @@
 
 ### Verdict
 
-ֻ���ǣ�
+只能是：
 
 - PASS
 - CONDITIONAL PASS
@@ -51,35 +51,35 @@
 
 ## Verdict Boundary
 
-PASS��
+PASS：
 
-��鷶Χ��û����ֹ�����ƽ������⡣
+检查范围内没有阻止继续推进的问题。
 
-CONDITIONAL PASS��
+CONDITIONAL PASS：
 
-������ȷ�ͷ���ȱ�ڣ������ƻ���ǰ���ߡ�
+存在明确低风险缺口，但不破坏当前主线。
 
-REVISE��
+REVISE：
 
-����ʵ�����⣬�����޸ĺ�����
+存在实质问题，必须修改后重审。
 
-REJECT��
+REJECT：
 
-��������������Ϣ�������Ի�ṹ�Ѿ��޷��ڵ�ǰ�汾�³�����
+核心因果、人物、信息、连续性或结构已经无法在当前版本下成立。
 
-QA_OVERRIDE��
+QA_OVERRIDE：
 
-������ȷ������֪���⣻�ⲻ�� PASS��
+作者明确保留已知问题；这不是 PASS。
 
 ## No Evidence, No Strong Verdict
 
-���������޷�ָ����ʵ���������������
+如果审查人无法指出事实、规则和推理链：
 
-���ø��� FATAL/HIGH/REJECT��
+不得给出 FATAL/HIGH/REJECT。
 
-ͬ����Ҳ������Ϊȱ��֤�ݾ����� PASS��
+同样，也不得因为缺乏证据就宣布 PASS。
 
-## Chapter Closure Record �� Required
+## Chapter Closure Record — Required
 
 Chapter-level records must use ../05_RED_TEAM/DRAMATIC_INTEGRITY_AUDITOR.md.
 Record:

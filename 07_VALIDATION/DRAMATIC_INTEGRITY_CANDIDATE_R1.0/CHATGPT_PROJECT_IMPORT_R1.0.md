@@ -1,30 +1,30 @@
-# ChatGPT ��Ŀ����ͬ���� �� Dramatic Integrity R1.0
+# ChatGPT 项目资料同步包 — Dramatic Integrity R1.0
 
-> �������ڣ�2026-10-08��Asia/Shanghai��
-> ״̬��CANDIDATE / REVIEW_REQUIRED / BLIND_TESTS_NOT_EXECUTED
-> ��;��ͬ����ѡ�����򣬲��޸� Story Bible��Canon ��С˵����״̬��
+> 更新日期：2026-10-08（Asia/Shanghai）
+> 状态：CANDIDATE / REVIEW_REQUIRED / BLIND_TESTS_NOT_EXECUTED
+> 用途：同步候选审查规则，不修改 Story Bible、Canon 或小说生产状态。
 
-## ��׷�ӵ����� Project Instructions �ĺ�ѡ����˵��
+## 可追加到现有 Project Instructions 的候选资料说明
 
-����Ŀ���� Dramatic Integrity ��ѡ��ǿ�������ʱ����ȷʹ����һ�����
-����ʽ�������ܿ�����ǰ���������ֺ�ѡ״̬��������������Զ���Ϊ���� QA_PASS��
-����Ϸ�����ձ��븲��ȫ���������Լ�Ŀ�������������ԡ�ת��Ǳ̨���뻥�����ܶ��ԡ���ʵ���ۡ���һ�����������������֤�ݡ�
-�߼� PASS���ıʺá�Writer Skill �Լ�� Handoff �Ϲ治��������� Dramatic PASS��
-ȱ�������֤�ݼǼ��״̬ INCOMPLETE �������½�δ�رգ�������֤�ݵ������ʧ�ܽ��� REVISE/REJECT��
-���߱�����֪����ʹ�� QA_OVERRIDE������αװ�� QA_PASS��
+本项目新增 Dramatic Integrity 候选补强包。审稿时须明确使用哪一版规则。
+在正式采用与受控验收前，本包保持候选状态；试验审查结果不自动成为生产 QA_PASS。
+完整戏剧验收必须覆盖全部场景，以及目标与阻力、策略、转向、潜台词与互动、能动性、真实代价、下一问题七项，并引用正文证据。
+逻辑 PASS、文笔好、Writer Skill 自检或 Handoff 合规不能替代独立 Dramatic PASS。
+缺少输入或证据记检查状态 INCOMPLETE 并保持章节未关闭；有正文证据的阻断性失败进入 REVISE/REJECT。
+作者保留已知问题使用 QA_OVERRIDE，不能伪装成 QA_PASS。
 
-ä�����ڲ����뱾��Ŀ֪ʶ��Ķ����������н��У�ֻ�ṩ���ĺ�������
-�ȶ��� Pass A�����ṩ Handoff��ƫ�뱨������������� Pass B�����ð������ͼ����������ʵ��
-ä��ʱ��Ҫ������������ṩ AUTHOR_EXPECTED_R1.0.md���������ۻ򱾰����˵����
-����������ֱ�׶԰׺��ӳٶ��ֵİ���������ܺϸ񣬲�����û��������û�������û�������Ʋƻ�е���ա�
+盲审须在不载入本项目知识库的独立上下文中进行，只提供正文和审查规则。
+先冻结 Pass A，再提供 Handoff、偏离报告和上游资料做 Pass B；不得把设计意图补成正文事实。
+盲测时不要向审稿上下文提供 AUTHOR_EXPECTED_R1.0.md、旧审稿结论或本包设计说明。
+安静场景、直白对白和延迟兑现的绑定义务均可能合格，不能以没有争吵、没有谜语或没有立即破财机械拒收。
 
-�������ķݺ�ѡ����Э��ȫ�ġ������ܹ���������������������������
-��������������ʵ����������ͻ����¼��ͻ��汾����ѡ���������Զ���д���� Canon��
+以下是四份候选核心协议全文。其他架构、人物、世界与表达规则继续保留。
+若本包与现有事实或创作决定冲突，记录冲突与版本；候选审查条款不得自动改写故事 Canon。
 
 
 ---
 
-## ��Դ��05_RED_TEAM/DRAMATIC_INTEGRITY_AUDITOR.md
+## 来源：05_RED_TEAM/DRAMATIC_INTEGRITY_AUDITOR.md
 
 # Dramatic Integrity Auditor
 
@@ -122,7 +122,7 @@ The number itself is not drama.
 
 If the chapter can be summarized as:
 
-event �� protagonist calculates �� protagonist understands principle �� protagonist makes correct decision �� protagonist writes lesson
+event → protagonist calculates → protagonist understands principle → protagonist makes correct decision → protagonist writes lesson
 
 the chapter should normally be REJECTED.
 
@@ -143,7 +143,7 @@ Dramatic Integrity is independent of prose beauty.
 A beautifully written chapter can still REJECT.
 A plain but dramatically alive chapter can PASS.
 
-## R1.1 �� Binding Acceptance Rules
+## R1.1 — Binding Acceptance Rules
 
 This section defines the acceptance threshold used by all chapter audits.
 Policy ID: DRAMATIC_INTEGRITY_R1.1_CANDIDATE.
@@ -203,31 +203,31 @@ Added explanatory sentences do not close a defect unless enacted pursuit, choice
 
 ---
 
-## ��Դ��07_VALIDATION/AUDIT_RECORD.md
+## 来源：07_VALIDATION/AUDIT_RECORD.md
 
 # Audit Record
 
-���ļ�������С����¼��ʽ��
+本文件定义最小审查记录格式。
 
 ## Required Fields
 
 ### Audit ID
-Ψһ����š�
+唯一审查编号。
 
 ### Artifact
-�����Ĺ��¹�����
+被审查的故事工件。
 
 ### Artifact Version
-�����汾��
+被审查版本。
 
 ### Upstream Baseline
-����������������ΰ汾��
+本次审查依赖的上游版本。
 
 ### Scope
-��ȷ���μ�鸲��ʲô��������ʲô��
+明确本次检查覆盖什么，不覆盖什么。
 
 ### Evidence
-�����¼��
+逐项记录：
 
 - Evidence ID
 - Location
@@ -237,7 +237,7 @@ Added explanatory sentences do not close a defect unless enacted pursuit, choice
 
 ### Findings
 
-ÿ�������¼��
+每项问题记录：
 
 - Severity: FATAL / HIGH / MEDIUM / LOW
 - Location
@@ -248,7 +248,7 @@ Added explanatory sentences do not close a defect unless enacted pursuit, choice
 
 ### Verdict
 
-ֻ���ǣ�
+只能是：
 
 - PASS
 - CONDITIONAL PASS
@@ -258,35 +258,35 @@ Added explanatory sentences do not close a defect unless enacted pursuit, choice
 
 ## Verdict Boundary
 
-PASS��
+PASS：
 
-��鷶Χ��û����ֹ�����ƽ������⡣
+检查范围内没有阻止继续推进的问题。
 
-CONDITIONAL PASS��
+CONDITIONAL PASS：
 
-������ȷ�ͷ���ȱ�ڣ������ƻ���ǰ���ߡ�
+存在明确低风险缺口，但不破坏当前主线。
 
-REVISE��
+REVISE：
 
-����ʵ�����⣬�����޸ĺ�����
+存在实质问题，必须修改后重审。
 
-REJECT��
+REJECT：
 
-��������������Ϣ�������Ի�ṹ�Ѿ��޷��ڵ�ǰ�汾�³�����
+核心因果、人物、信息、连续性或结构已经无法在当前版本下成立。
 
-QA_OVERRIDE��
+QA_OVERRIDE：
 
-������ȷ������֪���⣻�ⲻ�� PASS��
+作者明确保留已知问题；这不是 PASS。
 
 ## No Evidence, No Strong Verdict
 
-���������޷�ָ����ʵ���������������
+如果审查人无法指出事实、规则和推理链：
 
-���ø��� FATAL/HIGH/REJECT��
+不得给出 FATAL/HIGH/REJECT。
 
-ͬ����Ҳ������Ϊȱ��֤�ݾ����� PASS��
+同样，也不得因为缺乏证据就宣布 PASS。
 
-## Chapter Closure Record �� Required
+## Chapter Closure Record — Required
 
 Chapter-level records must use ../05_RED_TEAM/DRAMATIC_INTEGRITY_AUDITOR.md.
 Record:
@@ -310,75 +310,75 @@ Policy changes affecting acceptance require revalidation of dependent active art
 
 ---
 
-## ��Դ��07_VALIDATION/VALIDATION_PROTOCOL.md
+## 来源：07_VALIDATION/VALIDATION_PROTOCOL.md
 
 # Validation Protocol
 
-���ļ��ѡ�������������Ϊ����֤�Ĺ���״̬����������ͨ���顣
+本文件把“审稿意见”升级为可验证的工程状态，而不是普通建议。
 
 ## 1. Validation Principle
 
-�κι��¹������У�
+任何故事工件都有：
 
-- State����ǰ״̬
-- Version���汾
-- Upstream Dependencies�����������ι���
-- Evidence��֧�ֵ�ǰ���۵�֤��
-- Verdict����֤���
+- State：当前状态
+- Version：版本
+- Upstream Dependencies：依赖的上游工件
+- Evidence：支持当前结论的证据
+- Verdict：验证结果
 
-���Ѿ�д�����������ڡ��Ѿ���֤����
+“已经写出来”不等于“已经验证”。
 
 ## 2. Lock Rule
 
-����״ֻ̬���ڶ�Ӧ���ι����ȶ��������������
+以下状态只有在对应上游工件稳定后才允许成立：
 
-SEED �� CORE_DRAFT �� CORE_LOCKED �� CHARACTER_LOCKED �� WORLD_LOCKED �� OUTLINE_LOCKED �� CHAPTER_READY �� DRAFT �� QA_REVISE �� QA_PASS
+SEED → CORE_DRAFT → CORE_LOCKED → CHARACTER_LOCKED → WORLD_LOCKED → OUTLINE_LOCKED → CHAPTER_READY → DRAFT → QA_REVISE → QA_PASS
 
-�κ���������������ʵ���޸ģ�
+任何已锁定工件发生实质修改：
 
-1. ԭ����״̬����ʧЧ��
-2. ����ֱ�������������ι������ STALE��
-3. ���ü���ʹ�þɵ� QA_PASS��
-4. ����������֤��Ӱ�췶Χ��
+1. 原锁定状态立即失效；
+2. 所有直接依赖它的下游工件标记 STALE；
+3. 不得继续使用旧的 QA_PASS；
+4. 必须重新验证受影响范围。
 
 ## 3. Dependency Invalidation
 
-�޸ģ�
+修改：
 
-- Story Core �� �������¼�� Character / World / Outline / Turning Points / Chapter Handoff��
-- Character Psychology �� �������¼����� Turning Points / Outline / Chapter Handoff��
-- World Rule �� �������¼����Ӱ�� Causality / Outline / Foreshadowing / Chapters��
-- Outline / Turning Point �� �������¼����Ӱ�� Chapter Handoff / Foreshadowing��
-- Chapter prose �� ��������ִ�� Chapter Audit + ���� Dramatic Audit + Continuity Audit��������޸��Ƿ��ȱ��ת�Ƶ�����������
-- ���չ���汾�ı� �� ����鲻��ֱ��֤���¹����µ� QA_PASS��Ϊ��Ӱ��Ļ������¼��������֤��Χ��
+- Story Core → 至少重新检查 Character / World / Outline / Turning Points / Chapter Handoff。
+- Character Psychology → 至少重新检查相关 Turning Points / Outline / Chapter Handoff。
+- World Rule → 至少重新检查受影响 Causality / Outline / Foreshadowing / Chapters。
+- Outline / Turning Point → 至少重新检查受影响 Chapter Handoff / Foreshadowing。
+- Chapter prose → 至少重新执行 Chapter Audit + 独立 Dramatic Audit + Continuity Audit，并检查修复是否把缺陷转移到其他场景。
+- 验收规则版本改变 → 旧审查不得直接证明新规则下的 QA_PASS；为受影响的活动工件记录规则重验证范围。
 
-������Ϊ���Ķ���������С�������������жϡ�
+不得因为“改动看起来很小”而跳过依赖判断。
 
 ## 4. Evidence Rule
 
-ÿ���ش� Verdict �����ܻش�
+每个重大 Verdict 必须能回答：
 
-- �����ʲô��
-- �����ĸ��汾��
-- ������ʲô��ʵ��
-- �������������Υ����
-- ������ʲô��
+- 检查了什么？
+- 依据哪个版本？
+- 发现了什么事实？
+- 哪条规则被满足或违反？
+- 结论是什么？
 
-��ֹֻ������о�������������û���⡱�������޸ġ���
+禁止只输出“感觉成立”“整体没问题”“建议修改”。
 
 ## 5. Regression Rule
 
-REVISE / REJECT ��
+REVISE / REJECT 后：
 
-DRAFT �� QA_REVISE �� �޸� �� ��Ӱ��������� �� ������ FATAL/HIGH������ REVISE/REJECT �� ȫ����Ҫ���ͨ�� �� QA_PASS
+DRAFT → QA_REVISE → 修改 → 受影响审查重跑 → 若仍有 FATAL/HIGH：继续 REVISE/REJECT → 全部必要检查通过 → QA_PASS
 
-���ô� REJECT ֱ������ PASS��
+不得从 REJECT 直接跳到 PASS。
 
 ## 6. Scope of Revalidation
 
-���������޸Ķ�Ҫ������С˵����
+不是所有修改都要求整本小说重审。
 
-����˱�����ȷ��
+审查人必须明确：
 
 - Changed Artifact
 - Direct Dependents
@@ -386,11 +386,11 @@ DRAFT �� QA_REVISE �� �޸� �� ��Ӱ���������
 - Revalidation Required
 - Not Affected
 
-����޷�֤��ĳ�����Ӱ�족��Ĭ�ϱ��Ϊ��Ҫ��顣
+如果无法证明某项“不受影响”，默认标记为需要检查。
 
 ## 7. Validation Record
 
-����ÿ����鱣�棺
+建议每次审查保存：
 
 - Audit ID
 - Date
@@ -404,70 +404,70 @@ DRAFT �� QA_REVISE �� �޸� �� ��Ӱ���������
 
 ## 8. PASS Meaning
 
-PASS ���ǡ�Ŀǰû�з������⡱��
+PASS 不是“目前没有发现问题”。
 
-PASS �ĺ����ǣ�
+PASS 的含义是：
 
-> �������ļ�鷶Χ�������汾�Ϳ���֤���£�û�з���������ֹ�����ƽ������⡣
+> 在声明的检查范围、工件版本和可用证据下，没有发现足以阻止继续推进的问题。
 
-���ð����޷�Χ�� PASS �������Ϊ���������¾��Գ�������
+不得把有限范围的 PASS 扩大解释为“整个故事绝对成立”。
 
 ## 9. Chapter Closure Gate
 
-Ϸ�������� ../05_RED_TEAM/DRAMATIC_INTEGRITY_AUDITOR.md ΪΨһ�ж����ߡ�
-ʹ�� AUDIT_RECORD.md �� Chapter Closure Record��
+戏剧验收以 ../05_RED_TEAM/DRAMATIC_INTEGRITY_AUDITOR.md 为唯一判定基线。
+使用 AUDIT_RECORD.md 的 Chapter Closure Record。
 
-ֻ����������ͬʱ�������ſɽ��� QA_PASS��
-1. ��ǰ���İ汾�� Logical Verdict = PASS��
-2. ��ǰ���İ汾�� Dramatic Verdict = PASS���������������������Ǿ���֤�ݡ�
-3. ��Ҫ�������ԡ����ʡ�ƫ���������ɣ��ṹƫ���ѻ���ȷ������
-4. û����ֹ�ƽ���δ�ر����⣬û�б����鴦�� FAIL / INCOMPLETE��
-5. ���ġ����λ��ߺ����չ���汾���¼ƥ�䣬��¼δ STALE��
+只有以下条件同时成立，才可进入 QA_PASS：
+1. 当前正文版本的 Logical Verdict = PASS。
+2. 当前正文版本的 Dramatic Verdict = PASS，七项检查与完整场景覆盖均有证据。
+3. 必要的连续性、伏笔、偏离审查已完成，结构偏离已获明确处理。
+4. 没有阻止推进的未关闭问题，没有必需检查处于 FAIL / INCOMPLETE。
+5. 正文、上游基线和验收规则版本与记录匹配，记录未 STALE。
 
-CONDITIONAL PASS ����������ż��� PASS��
-ȱ�����ȱ֤��ʱ����δ�رգ�����ƾ�˱��� REJECT ������ PASS��
-���߱�����֪ȱ����ʹ�� QA_OVERRIDE�������� QA_PASS��
-��ʷ������������¹��������Զ�ת����
+CONDITIONAL PASS 不替代必需门槛的 PASS。
+缺输入或缺证据时保持未关闭，不得凭此编造 REJECT 或宣布 PASS。
+作者保留已知缺陷仍使用 QA_OVERRIDE，不纳入 QA_PASS。
+历史诊断样本不因新规则加入而自动转正。
 
 
 ---
 
-## ��Դ��07_VALIDATION/BLIND_DRAMATIC_AUDIT_PROTOCOL_R1.0.md
+## 来源：07_VALIDATION/BLIND_DRAMATIC_AUDIT_PROTOCOL_R1.0.md
 
-# Blind Dramatic Audit Protocol �� R1.0
+# Blind Dramatic Audit Protocol — R1.0
 
 ## Purpose
 
-��ֹ ChatGPT ��Ϊ�Լ�������ƣ��������ʱ����ʶ�����Լ��ķ�����
+防止 ChatGPT 因为自己参与设计，而在审稿时无意识保护自己的方案。
 
-## Pass A �� Prose-First Audit
+## Pass A — Prose-First Audit
 
-Pass A ʹ�ö�����������ģ�ֻ���մ������ĺ�������
-���ṩ Handoff�����˵�������߽��͡�Writer Deviation Report���������ۻ����Ԥ�ڴ𰸡�
-���ý�ƾ����ʱ��Ϊ��Ʊ绤������ä�����޷����룬��¼ INPUT_CONTAMINATED���ü�¼������ä������֤�ݣ��½ڱ���δ�رգ��ȴ�����������顣
+Pass A 使用独立审查上下文，只接收待审正文和审查规则。
+不提供 Handoff、设计说明、作者解释、Writer Deviation Report、旧审稿结论或测试预期答案。
+不得仅凭“暂时不为设计辩护”宣称盲审；若无法隔离，记录 INPUT_CONTAMINATED。该记录不构成盲审验收证据，章节保持未关闭，等待独立正文审查。
 
-�Ȱ� ../05_RED_TEAM/DRAMATIC_INTEGRITY_AUDITOR.md �г����������嵥�����ķ�Χ��
-ֻ�������ļ�¼��
-- ���ﵱǰĿ�ꣻ
-- ����Ŀ�ꣻ
-- ��Ϣ�
-- ���룻
-- ս�����Է���Ӧ��
-- Ǳ̨�ʻ�����/�ж���ʵ�ʻ���Ŀ�ģ�
-- ��ת��
-- �ؼ�ѡ��
-- ѡ����ۣ�
-- ��״̬������ɻ���������һ���⡣
+先按 ../05_RED_TEAM/DRAMATIC_INTEGRITY_AUDITOR.md 列出完整场景清单与正文范围。
+只根据正文记录：
+- 人物当前目标；
+- 对立目标；
+- 信息差；
+- 筹码；
+- 战术及对方回应；
+- 潜台词或言语/行动的实际互动目的；
+- 反转；
+- 关键选择；
+- 选择代价；
+- 新状态及它造成或升级的下一问题。
 
-Pass A ��ɺ󶳽�汾��֤�����ж���Pass B ����������ֻ���Ǹ��������ɡ�
+Pass A 完成后冻结版本、证据与判定；Pass B 不覆盖它，只另记更正及理由。
 
-Ȼ��ش�
+然后回答：
 
-> �����֪������ԭ�������ʲô����һ�±����Ƿ���Ȼ������
+> 如果不知道作者原本想表达什么，这一章本身是否仍然成立？
 
-## Pass B �� Contract Audit
+## Pass B — Contract Audit
 
-���������� Handoff ���գ�
+再拿正文与 Handoff 对照：
 - required objective;
 - required causal chain;
 - state delta;
@@ -475,44 +475,44 @@ Pass A ��ɺ󶳽�汾��֤�����ж���Pass B �����
 - foreshadowing;
 - character limits.
 
-## Pass C �� Counterfactual Audit
+## Pass C — Counterfactual Audit
 
-���ÿ�������½�����Ĺؼ�ѡ�񣬱��淴��ʵ�������Խ����Ӱ�죻������������䣬�� Dramatic ���չ����ж�ȱ�ݣ�
-- ɾ������ѡ����Ƿ���Ȼ������
-- ɾ�������������Ƿ���Ȼ������
-- ���ֲ�ȡ���������Ժ������Ƿ������ƽ���
-- ����ѡ���෴�����ᷢ��ʲô��
+针对每个控制章节走向的关键选择，保存反事实推理及对结果的影响；若结果基本不变，按 Dramatic 验收规则判定缺陷：
+- 删除主角选择后是否仍然发生？
+- 删除对手阻力后是否仍然成立？
+- 对手采取更合理策略后主角是否仍能推进？
+- 主角选择相反方案会发生什么？
 
 ## Automatic Dramatic Warning
 
-������һģʽ���������������ϳ��������� REVISE��
+以下任一模式连续出现两个以上场景，至少 REVISE：
 
-�¼� �� ���ǽ��� �� ���Ƕ��� �� ��ȷѡ��
+事件 → 主角解释 → 主角顿悟 → 正确选择
 
-��ɫ���� �� �ṩ��Ϣ �� �������� �� ��ɫ�뿪
+角色进入 → 提供信息 → 主角理解 → 角色离开
 
-��ͻ���� �� ��ҵ���� �� ���Ǽ��� �� ��ͻ���
+冲突出现 → 商业数字 → 主角计算 → 冲突解决
 
 ## Anti-Self-Protection Rule
 
-��������� ChatGPT ԭ��Ƴ�ͻ��
-���ж������Ƿ��������
+如果正文与 ChatGPT 原设计冲突：
+先判断正文是否更成立。
 
-������Ϊ������ Handoff Ҫ�󡱾��Զ���������ȷ��
+不能因为“这是 Handoff 要求”就自动判正文正确。
 
-��� Handoff ������ɲ���ȻϷ�磬Ӧ��� ARCHITECTURE_DEFECT��
+如果 Handoff 本身造成不自然戏剧，应提出 ARCHITECTURE_DEFECT。
 
 ## Verdict
 
-Blind audit ���������
+Blind audit 可以提出：
 - PASS
 - CONDITIONAL PASS
 - REVISE
 - REJECT
 
-���ɱ�����������֤�ݡ�
+理由必须引用正文证据。
 
-ȱ����/֤��ʱ�ü��״̬ INCOMPLETE�������½�δ�رա�
-���� Dramatic Verdict ��������Ψһ���ձ��������� CONDITIONAL PASS �ƹ�ʧ�ܻ�δ����
-����Ԥ���ж�ֻ�ɱȽϲ����ȡ�������� Pass A/B/C ��������롣
+缺输入/证据时用检查状态 INCOMPLETE，保持章节未关闭。
+最终 Dramatic Verdict 必须遵守唯一验收表，不能用 CONDITIONAL PASS 绕过失败或未完成项。
+测试预期判定只由比较步骤读取，不进入 Pass A/B/C 的审稿输入。
 

@@ -1,17 +1,17 @@
-# AI Novel Model Pipeline Contract �� R1.0
+# AI Novel Model Pipeline Contract — R1.0
 
 ## 1. Roles
 
 ChatGPT:
-Architect �� Adversarial Reviewer �� Handoff Author �� Red Team �� Revision Judge
+Architect → Adversarial Reviewer → Handoff Author → Red Team → Revision Judge
 
 Gemini:
-Prose Writer �� Scene Executor �� Revision Executor
+Prose Writer → Scene Executor → Revision Executor
 
 Author:
-Creative Authority �� Override Authority
+Creative Authority → Override Authority
 
-## 2. Stage A �� Architecture
+## 2. Stage A — Architecture
 
 Input may be vague.
 ChatGPT converts vague ideas into explicit hypotheses.
@@ -40,7 +40,7 @@ Minimum attack set:
 
 If several alternatives preserve the same thematic answer, the core is not yet uniquely constrained.
 
-## 3. Stage B �� Architecture Lock
+## 3. Stage B — Architecture Lock
 
 Lock only after:
 - core questions have evidence-based answers;
@@ -50,7 +50,7 @@ Lock only after:
 - ending dependency is demonstrated;
 - unresolved assumptions are explicitly tracked.
 
-## 4. Stage C �� Dramatic Contract
+## 4. Stage C — Dramatic Contract
 
 ChatGPT creates a Chapter Dramatic Contract.
 
@@ -69,7 +69,7 @@ Minimum fields:
 
 This contract defines the structural boundary for Gemini.
 
-## 5. Stage D �� Gemini Writing
+## 5. Stage D — Gemini Writing
 
 Gemini receives only the context required to execute the chapter safely:
 - current state;
@@ -85,7 +85,7 @@ Gemini returns:
 - Draft;
 - Writer Deviation Report.
 
-## 6. Stage E �� Draft Intake
+## 6. Stage E — Draft Intake
 
 The intake operator may check compliance, but must not expose the Handoff, deviation report, or intake conclusions to the separate Pass A context. If context separation is unavailable, run and freeze Pass A before compliance comparison.
 
@@ -99,7 +99,7 @@ Questions:
 
 Compliance is not quality.
 
-## 7. Stage F �� Blind Dramatic Audit
+## 7. Stage F — Blind Dramatic Audit
 
 Pass A receives only prose and audit rules in a separate context. Follow ../07_VALIDATION/BLIND_DRAMATIC_AUDIT_PROTOCOL_R1.0.md and freeze its evidence before baseline comparison.
 
@@ -121,7 +121,7 @@ Then ask:
 
 Pass A should not be biased by the expected verdict.
 
-## 8. Stage G �� Baseline Comparison Audit
+## 8. Stage G — Baseline Comparison Audit
 
 Pass B compares the prose against:
 - approved Dramatic Contract;
@@ -138,7 +138,7 @@ Classify deviations:
 - continuity defect;
 - dramatic integrity defect.
 
-## 9. Stage H �� Verdict
+## 9. Stage H — Verdict
 
 A chapter can receive PASS only when:
 - contract compliance is acceptable;
@@ -151,7 +151,7 @@ A chapter can receive PASS only when:
 
 Prose quality alone cannot compensate for structural failure.
 
-## 10. Stage I �� Revision
+## 10. Stage I — Revision
 
 ChatGPT issues a Revision Brief.
 
@@ -167,7 +167,7 @@ Gemini revises.
 
 Gemini must disclose changes.
 
-## 11. Stage J �� Second Audit
+## 11. Stage J — Second Audit
 
 Repeat:
 - contract compliance;
@@ -178,7 +178,7 @@ Repeat:
 Special question:
 > Did the repair actually remove the original defect, or did it merely explain it better?
 
-## 12. Stage K �� Closure
+## 12. Stage K — Closure
 
 QA_PASS only when the Chapter Closure Gate in ../07_VALIDATION/VALIDATION_PROTOCOL.md is satisfied. A limited PASS, CONDITIONAL PASS, or missing check cannot authorize closure.
 
@@ -195,13 +195,13 @@ Change the upstream architecture or Handoff rule.
 
 Example:
 Repeated exposition-heavy chapters
-�� redesign Dramatic Contract.
+→ redesign Dramatic Contract.
 
 Repeated weak motivations
-�� redesign Character Psychology.
+→ redesign Character Psychology.
 
 Repeated convenient coincidences
-�� redesign Causality.
+→ redesign Causality.
 
 ## 14. Non-Negotiable Principle
 

@@ -94,7 +94,7 @@ The number itself is not drama.
 
 If the chapter can be summarized as:
 
-event �� protagonist calculates �� protagonist understands principle �� protagonist makes correct decision �� protagonist writes lesson
+event → protagonist calculates → protagonist understands principle → protagonist makes correct decision → protagonist writes lesson
 
 the chapter should normally be REJECTED.
 
@@ -115,7 +115,7 @@ Dramatic Integrity is independent of prose beauty.
 A beautifully written chapter can still REJECT.
 A plain but dramatically alive chapter can PASS.
 
-## R1.1 �� Binding Acceptance Rules
+## R1.1 — Binding Acceptance Rules
 
 This section defines the acceptance threshold used by all chapter audits.
 Policy ID: DRAMATIC_INTEGRITY_R1.1_CANDIDATE.
