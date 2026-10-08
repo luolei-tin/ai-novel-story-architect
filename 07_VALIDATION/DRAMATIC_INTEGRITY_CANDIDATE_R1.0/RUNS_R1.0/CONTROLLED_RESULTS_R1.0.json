@@ -1,0 +1,178 @@
+{
+  "a1": {
+    "case_count": 10,
+    "label_matches": 10,
+    "target_failures_identified": 7,
+    "required_checks": 70,
+    "schema_errors": [],
+    "invalid_anchors": [],
+    "raw_unchanged": true,
+    "results": [
+      {
+        "case": "D01",
+        "expected": "REVISE_OR_REJECT",
+        "actual": "REJECT",
+        "label_matches": true,
+        "target": "DI-06",
+        "target_status": "FAIL"
+      },
+      {
+        "case": "D02",
+        "expected": "PASS",
+        "actual": "PASS",
+        "label_matches": true,
+        "target": null,
+        "target_status": null
+      },
+      {
+        "case": "D03",
+        "expected": "REVISE_OR_REJECT",
+        "actual": "REJECT",
+        "label_matches": true,
+        "target": "DI-05",
+        "target_status": "FAIL"
+      },
+      {
+        "case": "D04",
+        "expected": "REVISE_OR_REJECT",
+        "actual": "REJECT",
+        "label_matches": true,
+        "target": "DI-01",
+        "target_status": "FAIL"
+      },
+      {
+        "case": "D05",
+        "expected": "PASS",
+        "actual": "PASS",
+        "label_matches": true,
+        "target": null,
+        "target_status": null
+      },
+      {
+        "case": "D06",
+        "expected": "REVISE_OR_REJECT",
+        "actual": "REVISE",
+        "label_matches": true,
+        "target": "DI-02",
+        "target_status": "FAIL"
+      },
+      {
+        "case": "D07",
+        "expected": "REVISE_OR_REJECT",
+        "actual": "REVISE",
+        "label_matches": true,
+        "target": "DI-07",
+        "target_status": "FAIL"
+      },
+      {
+        "case": "D08",
+        "expected": "REVISE_OR_REJECT",
+        "actual": "REJECT",
+        "label_matches": true,
+        "target": "DI-04",
+        "target_status": "FAIL"
+      },
+      {
+        "case": "D09",
+        "expected": "REVISE_OR_REJECT",
+        "actual": "REJECT",
+        "label_matches": true,
+        "target": "DI-03",
+        "target_status": "FAIL"
+      },
+      {
+        "case": "D10",
+        "expected": "PASS",
+        "actual": "PASS",
+        "label_matches": true,
+        "target": null,
+        "target_status": null
+      }
+    ]
+  },
+  "a2": {
+    "repair_verdict": "PASS",
+    "process_decisions": {
+      "Q01": "NOT_CLOSED",
+      "Q02": "INPUT_CONTAMINATED / NOT_CLOSED",
+      "Q03": "QA_PASS（仅合成状态测试）",
+      "Q04": "QA_OVERRIDE"
+    },
+    "raw_sha256": {
+      "BLIND_DRAMATIC_REGRESSION_R1.0_RAW.md": "e0598a78377e4e77077ccce4e1b42e67cb04bf0c57edc0512f636bd0f04e06d1",
+      "BLIND_DRAMATIC_REGRESSION_R1.0_RAW.json": "40a0558f4fdaff2ad6094df14a6a6e086d032379113e96db674f70dccacca878"
+    }
+  },
+  "manual_evidence_review": {
+    "complete": true,
+    "qualified_note": "D01 initial 300-price is an interpretation of the three-finger gesture, not an explicit numeric quote; do not label it an observed exact figure. It does not affect DI-06 or overall blocking findings."
+  },
+  "method_verdict": "REVISE_BEFORE_FULL_ADOPTION",
+  "production_qa_pass": false,
+  "a3": {
+    "chapters": [
+      {
+        "id": "C01",
+        "verdict": "PASS",
+        "paragraphs": 303,
+        "scenes": 4,
+        "coverage": "COMPLETE"
+      },
+      {
+        "id": "C02",
+        "verdict": "REJECT",
+        "paragraphs": 210,
+        "scenes": 6,
+        "coverage": "COMPLETE"
+      },
+      {
+        "id": "C03",
+        "verdict": "PASS",
+        "paragraphs": 258,
+        "scenes": 2,
+        "coverage": "COMPLETE"
+      },
+      {
+        "id": "C04",
+        "verdict": "REVISE",
+        "paragraphs": 155,
+        "scenes": 2,
+        "coverage": "COMPLETE"
+      }
+    ],
+    "sequence": {
+      "status": "REVISE",
+      "reason": "四章连续阅读不能Dramatic PASS：C02中央选择的代价/下一问题不成立而解释结构主导，需重写；C04局部结尾不满足原规则DI-07。C01/C03的有效核验、付款/拒约与具体后继问题应保留，不把它们平均抹除。序列修订结论不表示整部小说REJECT。",
+      "repeated_structures": [
+        {
+          "anchors": [
+            "C01-P045～P097",
+            "C01-P186～P210",
+            "C01-P273～P303",
+            "C02-P011～P070",
+            "C02-P112～P144",
+            "C02-P174～P210"
+          ],
+          "fact": "连续出现商业信息→现金计算→与前世对比/原则→谨慎行动→角色或账本再确认知见。C01有付款/期限与商户留驻任务，结构仍有实质成本；C02主要保现金、记知见且未证明新增付价/问题，重复开始取代推进。"
+        },
+        {
+          "anchors": [
+            "C02-P145～P188",
+            "C03-P216～P258",
+            "C04-P129～P155"
+          ],
+          "fact": "商户/林解释兑现或判断纪律，主角再写账本格言，最后旁白给钱/后果的意义；同一承诺主题反复由三个渠道解释。没有因为早餐/风景/打印的桥接就视为模式已重置。"
+        },
+        {
+          "anchors": [
+            "C03-P136～P199",
+            "C04-P027～P117"
+          ],
+          "fact": "C03/C04也有算账与格言外壳，但内部有具体货运时段、相互不肯接受的条件、离去/回座、真实支出和签约；中央结果不是只由旁白顿悟发生。故不把重复模板直接升级为四章全体REJECT。"
+        }
+      ],
+      "recommendation": "先修C02的成立成本/后继测试、C04的具体后继压力或明定闭合例外；再删多渠道重述，重提改动场景并扫描整序列是否把缺陷转移。只删说理不会补成本和新问题。"
+    },
+    "expected_labels_provided": false
+  }
+}

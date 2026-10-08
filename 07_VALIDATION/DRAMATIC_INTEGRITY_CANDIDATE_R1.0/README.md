@@ -3,7 +3,7 @@
 日期：2026-10-08（Asia/Shanghai）。
 需求：[issue #3](https://github.com/luolei-tin/ai-novel-story-architect/issues/3)。
 源基线：main@2694f2aa0b427ab8abdfd3548c514abf774ed8d3。
-状态：CANDIDATE / DRAFT_PR / SEMANTIC_TESTS_NOT_EXECUTED。
+状态：CANDIDATE / DRAFT_PR / CONTROLLED_TESTS_EXECUTED / FULL_ACCEPTANCE_PENDING。
 本包不声明生产验收通过，不关闭 issue，不改变小说 Canon，也不复活旧四章的历史 PASS。
 
 ## 材料
@@ -33,7 +33,8 @@ INCOMPLETE 是检查状态，NOT_CLOSED 是关闭决策；并不替换已有 Ver
 ## 验证情况
 
 已完成：候选补丁在源基线的本地内容副本上通过应用检查，18 处协议相对引用解析成功，10 个样本 ID 完整且唯一。
-未完成：独立模型盲测、原四章独立重审、新 Dramatic Contract 的初稿—返修—二审闭环。
+已完成：A1 独立受控盲测、A2 结构修复与流程门槛回归、A3 原四章正文优先复查。详见实际结果。
+未完成：边界条款版本化重测、新 Dramatic Contract 的初稿—返修—二审完整闭环及跨审稿人复核。
 
 缩微样本用于诊断，不是严格的单变量消融；目标缺陷可能伴随其他缺口。
 未来测得标签命中但证据不实，仍判本轮未通过；不能事后悄悄改答案制造 PASS。
@@ -46,3 +47,14 @@ INCOMPLETE 是检查状态，NOT_CLOSED 是关闭决策；并不替换已有 Ver
 4. 用新的 Dramatic Contract 做生产闭环。
 5. 根据真实结果决定采用范围与 issue #3 验收状态。
 
+
+## 2026-10-08 实际验收进展
+
+- [实际验收结果](ACCEPTANCE_RESULTS_R1.0.md)：A1标签10/10吻合、七个目标缺陷识别、修复与四个流程控制、原四章的两PASS/一REJECT/一REVISE。
+- [测试包自身红队](TEST_PACKAGE_REVIEW_R1.0.md)：混合缺陷、显式提示与覆盖不足。
+- [边界条款候选R1.2](BOUNDARY_CLARIFICATIONS_R1.2_CANDIDATE.md)：尚未替换有效规则，未用旧测试为它背书。
+- [运行输入、原始判定便携副本与哈希](RUNS_R1.0/RUN_MANIFESTS_R1.0.json)。
+
+原始报告在本地保持冻结；仓库副本只将机器路径替换成可追溯的仓库路径并统一行尾，不改判定或证据。
+早期输入/预期/导入文件内NOT_EXECUTED是出题或同步前的冻结进度快照；当前执行状态以本节与实际结果为准。
+这不表示正式采用、生产QA_PASS或issue关闭。收束、策略与互动边界仍需修订验证。
