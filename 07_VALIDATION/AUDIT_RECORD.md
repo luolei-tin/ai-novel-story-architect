@@ -1,26 +1,26 @@
 # Audit Record
 
-本文件定义最小审查记录格式。
+���ļ�������С����¼��ʽ��
 
 ## Required Fields
 
 ### Audit ID
-唯一审查编号。
+Ψһ����š�
 
 ### Artifact
-被审查的故事工件。
+�����Ĺ��¹�����
 
 ### Artifact Version
-被审查版本。
+�����汾��
 
 ### Upstream Baseline
-本次审查依赖的上游版本。
+����������������ΰ汾��
 
 ### Scope
-明确本次检查覆盖什么，不覆盖什么。
+��ȷ���μ�鸲��ʲô��������ʲô��
 
 ### Evidence
-逐项记录：
+�����¼��
 
 - Evidence ID
 - Location
@@ -30,7 +30,7 @@
 
 ### Findings
 
-每项问题记录：
+ÿ�������¼��
 
 - Severity: FATAL / HIGH / MEDIUM / LOW
 - Location
@@ -41,7 +41,7 @@
 
 ### Verdict
 
-只能是：
+ֻ���ǣ�
 
 - PASS
 - CONDITIONAL PASS
@@ -51,30 +51,51 @@
 
 ## Verdict Boundary
 
-PASS：
+PASS��
 
-检查范围内没有阻止继续推进的问题。
+��鷶Χ��û����ֹ�����ƽ������⡣
 
-CONDITIONAL PASS：
+CONDITIONAL PASS��
 
-存在明确低风险缺口，但不破坏当前主线。
+������ȷ�ͷ���ȱ�ڣ������ƻ���ǰ���ߡ�
 
-REVISE：
+REVISE��
 
-存在实质问题，必须修改后重审。
+����ʵ�����⣬�����޸ĺ�����
 
-REJECT：
+REJECT��
 
-核心因果、人物、信息、连续性或结构已经无法在当前版本下成立。
+��������������Ϣ�������Ի�ṹ�Ѿ��޷��ڵ�ǰ�汾�³�����
 
-QA_OVERRIDE：
+QA_OVERRIDE��
 
-作者明确保留已知问题；这不是 PASS。
+������ȷ������֪���⣻�ⲻ�� PASS��
 
 ## No Evidence, No Strong Verdict
 
-如果审查人无法指出事实、规则和推理链：
+���������޷�ָ����ʵ���������������
 
-不得给出 FATAL/HIGH/REJECT。
+���ø��� FATAL/HIGH/REJECT��
 
-同样，也不得因为缺乏证据就宣布 PASS。
+ͬ����Ҳ������Ϊȱ��֤�ݾ����� PASS��
+
+## Chapter Closure Record �� Required
+
+Chapter-level records must use ../05_RED_TEAM/DRAMATIC_INTEGRITY_AUDITOR.md.
+Record:
+- Prose artifact ID, version, and content hash or immutable commit.
+- Audit policy ID/version.
+- Pass A inputs and contamination disclosure.
+- Complete scene inventory: ranges, type, materiality, and exemption reasons.
+- DI-01 through DI-07 evidence, observed mechanism, check status, and findings.
+- Central-choice counterfactual outcomes.
+- Frozen Pass A record and separately recorded baseline comparison.
+- Logical Verdict and Dramatic Verdict.
+- Required continuity/foreshadow/deviation checks and current status.
+- Open findings, repairs, and revalidation scope.
+- Closure Decision: QA_PASS / NOT_CLOSED / QA_OVERRIDE.
+
+An uncompleted check uses Check Status: INCOMPLETE, not a fabricated strong Verdict.
+A required INCOMPLETE or material FAIL blocks QA_PASS.
+PASS / CONDITIONAL PASS on a limited scope is never the chapter's closure decision.
+Policy changes affecting acceptance require revalidation of dependent active artifacts.
