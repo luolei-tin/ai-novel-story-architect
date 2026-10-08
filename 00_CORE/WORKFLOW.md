@@ -53,6 +53,8 @@
 
 ## Stage 6 — Red Team
 审稿顺序：
-Causality → Character → Information → Structure → Continuity → Foreshadowing → Prose。
+独立上下文 Blind Prose Audit（先冻结正文证据）→ Baseline Comparison → Causality → Character → Information → Structure → Continuity → Foreshadowing → Dramatic Integrity → Prose。
+
+Dramatic Integrity 必须按 ../05_RED_TEAM/DRAMATIC_INTEGRITY_AUDITOR.md 执行；章节关闭必须满足 ../07_VALIDATION/VALIDATION_PROTOCOL.md 的 Chapter Closure Gate。
 
 先审“成立不成立”，后审“写得好不好”。

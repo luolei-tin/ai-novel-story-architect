@@ -87,7 +87,7 @@ Gemini returns:
 
 ## 6. Stage E — Draft Intake
 
-Before quality judgment, ChatGPT checks contract compliance.
+The intake operator may check compliance, but must not expose the Handoff, deviation report, or intake conclusions to the separate Pass A context. If context separation is unavailable, run and freeze Pass A before compliance comparison.
 
 Questions:
 - Did the writer preserve the required state?
@@ -101,7 +101,7 @@ Compliance is not quality.
 
 ## 7. Stage F — Blind Dramatic Audit
 
-Pass A must analyze the prose primarily from the prose itself.
+Pass A receives only prose and audit rules in a separate context. Follow ../07_VALIDATION/BLIND_DRAMATIC_AUDIT_PROTOCOL_R1.0.md and freeze its evidence before baseline comparison.
 
 Do not begin by defending the Handoff.
 
@@ -147,7 +147,7 @@ A chapter can receive PASS only when:
 - information integrity is sound;
 - continuity is sound;
 - foreshadow requirements are sound;
-- dramatic integrity is sound.
+- dramatic integrity independently passes ../05_RED_TEAM/DRAMATIC_INTEGRITY_AUDITOR.md, with full scene coverage and DI-01 through DI-07 prose evidence.
 
 Prose quality alone cannot compensate for structural failure.
 
@@ -180,7 +180,7 @@ Special question:
 
 ## 12. Stage K — Closure
 
-QA_PASS only when evidence supports closure.
+QA_PASS only when the Chapter Closure Gate in ../07_VALIDATION/VALIDATION_PROTOCOL.md is satisfied. A limited PASS, CONDITIONAL PASS, or missing check cannot authorize closure.
 
 Then:
 - update END STATE;

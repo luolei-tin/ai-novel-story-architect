@@ -91,7 +91,8 @@ ID / Plant / Surface Interpretation / True Meaning / Trigger / Payoff / Reader V
 
 ## 9. /audit-chapter
 用途：审查 Gemini 正文。
-固定顺序：
+先按 ../07_VALIDATION/BLIND_DRAMATIC_AUDIT_PROTOCOL_R1.0.md 在独立上下文完成正文审查并冻结；再做基线比较。
+以下检查均须完成，Dramatic Integrity 以 ../05_RED_TEAM/DRAMATIC_INTEGRITY_AUDITOR.md 为唯一验收表：
 1. Causality
 2. Character
 3. Information
@@ -204,7 +205,7 @@ ChatGPT 默认负责诊断和修改指令，不代替 Gemini 大规模重写正�
 目标是“修因果/人物/戏剧结构”，不是把整个章节重新发明。
 
 ## 18. /chapter-close
-用途：只有 QA_PASS 后才能执行。
+用途：只有满足 ../07_VALIDATION/VALIDATION_PROTOCOL.md 的 Chapter Closure Gate、取得当前版本的独立 Logical PASS 与 Dramatic PASS 后才能执行。
 完成：
 - END STATE 写入权威状态
 - 记录审查证据

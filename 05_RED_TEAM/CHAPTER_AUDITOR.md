@@ -2,7 +2,10 @@
 
 ## 判定
 
-- PASS：关键逻辑闭合，无重大结构问题。
+- PASS：声明范围内的检查完成并成立；章节总体放行还必须满足独立 Dramatic PASS 与全部必要检查。
+- 戏剧检查必须引用 DRAMATIC_INTEGRITY_AUDITOR.md，完整场景清单和独立判定不得省略。
+- 先执行 ../07_VALIDATION/BLIND_DRAMATIC_AUDIT_PROTOCOL_R1.0.md 的独立正文审查并冻结，再对照 Handoff。
+- QA_PASS 只由 ../07_VALIDATION/VALIDATION_PROTOCOL.md 的 Chapter Closure Gate 决定。
 - CONDITIONAL PASS：可继续，但存在明确的小缺口。
 - REVISE：章节目标或因果链存在实质问题，需要修改。
 - REJECT：章节建立在错误因果、人物失真、严重连续性错误或强行推进上。

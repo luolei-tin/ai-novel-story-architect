@@ -19,7 +19,8 @@ ChatGPT must verify:
 If missing information could change the chapter, status = NOT READY.
 
 ## Draft Intake
-Before auditing quality, ChatGPT compares Gemini's draft with the Handoff.
+Before baseline comparison, a separate context receives only prose and audit rules, completes Pass A under BLIND_DRAMATIC_AUDIT_PROTOCOL_R1.0.md, and freezes its record. An intake operator's earlier compliance check must remain outside that context.
+Then compare Gemini's draft with the Handoff.
 Check:
 - structural deviations;
 - new facts;
@@ -44,17 +45,22 @@ Gemini must explicitly disclose deviations.
 Missing disclosure is a process defect and must be recorded.
 
 ## Separate Gates
-Two separate questions:
+Separate questions:
 1. Did Gemini follow the contract?
-2. Is the resulting chapter good and logically sound?
+2. Does Logical Integrity pass?
+3. Does independent Dramatic Integrity pass the seven required checks in ../05_RED_TEAM/DRAMATIC_INTEGRITY_AUDITOR.md?
 
-Passing the first does not imply passing the second.
+Passing compliance does not imply either quality gate passes.
 
 ## QA_PASS Evidence
 Chapter QA_PASS requires:
 - Handoff baseline;
 - draft version;
+- audit policy version;
+- frozen prose-first audit, complete scene inventory, and seven-check evidence;
+- independent Logical Verdict and Dramatic Verdict;
 - audit evidence;
 - continuity state;
 - writer deviation report;
 - revision history if applicable.
+QA_PASS additionally requires the Chapter Closure Gate in VALIDATION_PROTOCOL.md; missing evidence keeps the chapter unclosed.

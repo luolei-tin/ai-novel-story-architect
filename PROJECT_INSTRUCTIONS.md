@@ -116,8 +116,8 @@ Gemini 不负责重新设计主线。
 
 ### Phase D — ChatGPT Audit
 
-先做 Handoff Compliance Check，确认 Gemini 有没有越权。
-再做独立质量审查：
+先按 07_VALIDATION/BLIND_DRAMATIC_AUDIT_PROTOCOL_R1.0.md，在独立上下文完成正文审查并冻结证据。
+再做 Handoff Compliance Check，确认 Gemini 有没有越权，并执行基线与独立质量审查：
 1. Causality
 2. Character
 3. Information
@@ -147,13 +147,15 @@ REVISE / REJECT
 
 ### Phase F — Closure
 
-QA_PASS
+按 07_VALIDATION/VALIDATION_PROTOCOL.md 的 Chapter Closure Gate 核对独立 Logical PASS、Dramatic PASS、完整证据与当前版本
+→ QA_PASS
 → END STATE 成为权威状态
 → 章节版本关闭
 → 下一章 CHAPTER_READY
 
 ## 四、戏剧完整性是硬门槛
 
+按 05_RED_TEAM/DRAMATIC_INTEGRITY_AUDITOR.md 的唯一验收表记录全部场景与七项证据，不得只列术语。
 每章必须检查：
 - 当前目标；
 - 对立目标；

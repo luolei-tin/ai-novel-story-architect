@@ -35,7 +35,8 @@ SEED → CORE_DRAFT → CORE_LOCKED → CHARACTER_LOCKED → WORLD_LOCKED → OU
 - Character Psychology → 至少重新检查相关 Turning Points / Outline / Chapter Handoff。
 - World Rule → 至少重新检查受影响 Causality / Outline / Foreshadowing / Chapters。
 - Outline / Turning Point → 至少重新检查受影响 Chapter Handoff / Foreshadowing。
-- Chapter prose → 至少重新执行 Chapter Audit + Continuity Audit。
+- Chapter prose → 至少重新执行 Chapter Audit + 独立 Dramatic Audit + Continuity Audit，并检查修复是否把缺陷转移到其他场景。
+- 验收规则版本改变 → 旧审查不得直接证明新规则下的 QA_PASS；为受影响的活动工件记录规则重验证范围。
 
 不得因为“改动看起来很小”而跳过依赖判断。
 
@@ -96,3 +97,20 @@ PASS 的含义是：
 > 在声明的检查范围、工件版本和可用证据下，没有发现足以阻止继续推进的问题。
 
 不得把有限范围的 PASS 扩大解释为“整个故事绝对成立”。
+
+## 9. Chapter Closure Gate
+
+戏剧验收以 ../05_RED_TEAM/DRAMATIC_INTEGRITY_AUDITOR.md 为唯一判定基线。
+使用 AUDIT_RECORD.md 的 Chapter Closure Record。
+
+只有以下条件同时成立，才可进入 QA_PASS：
+1. 当前正文版本的 Logical Verdict = PASS。
+2. 当前正文版本的 Dramatic Verdict = PASS，七项检查与完整场景覆盖均有证据。
+3. 必要的连续性、伏笔、偏离审查已完成，结构偏离已获明确处理。
+4. 没有阻止推进的未关闭问题，没有必需检查处于 FAIL / INCOMPLETE。
+5. 正文、上游基线和验收规则版本与记录匹配，记录未 STALE。
+
+CONDITIONAL PASS 不替代必需门槛的 PASS。
+缺输入或缺证据时保持未关闭，不得凭此编造 REJECT 或宣布 PASS。
+作者保留已知缺陷仍使用 QA_OVERRIDE，不纳入 QA_PASS。
+历史诊断样本不因新规则加入而自动转正。

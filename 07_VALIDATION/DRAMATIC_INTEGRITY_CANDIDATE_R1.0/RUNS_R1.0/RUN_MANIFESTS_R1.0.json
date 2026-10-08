@@ -1,0 +1,134 @@
+{
+  "status": "CONTROLLED_TESTS_EXECUTED / FULL_ACCEPTANCE_PENDING",
+  "policy_id": "DRAMATIC_INTEGRITY_R1.1_CANDIDATE",
+  "tested_commit": "0acdd3e431613fcfccfd4152d62f801a72be71b1",
+  "source_novel_commit": "2694f2aa0b427ab8abdfd3548c514abf774ed8d3",
+  "auditor": "one independent subagent, inherited model configuration; exact model ID not recorded",
+  "isolation": "A1 forked without parent history; expected answers withheld. A2/A3 retain auditor's own preceding run history.",
+  "original_raw_bytes_sha256": {
+    "BLIND_DRAMATIC_AUDIT_R1.0_RAW.md": "bff23f0992e00b2d9fcc1e611d6716ae0ef78717d6fc576152b98b95f7dbe3f1",
+    "BLIND_DRAMATIC_AUDIT_R1.0_RAW.json": "160c9a9e288419aeee50417d12f3c2850b425e1ef3e31501ab4579532f7b19f6",
+    "BLIND_DRAMATIC_REGRESSION_R1.0_RAW.md": "e0598a78377e4e77077ccce4e1b42e67cb04bf0c57edc0512f636bd0f04e06d1",
+    "BLIND_DRAMATIC_REGRESSION_R1.0_RAW.json": "40a0558f4fdaff2ad6094df14a6a6e086d032379113e96db674f70dccacca878",
+    "ORIGINAL_FOUR_CHAPTER_DRAMATIC_AUDIT_R1.0_RAW.md": "ffab34863a34766d705e5580a8a9e707f2746fd0dca05967acca4aa668af1840",
+    "ORIGINAL_FOUR_CHAPTER_DRAMATIC_AUDIT_R1.0_RAW.json": "90a643d20c2461c7f5aba36432ded97fd458b4055c4c715ddbd7859a3a70a826"
+  },
+  "public_portable_copy_sha256": {
+    "BLIND_DRAMATIC_AUDIT_R1.0_RAW.md": "c85e2d3fcfb84fd4c156c4aea765b9a55143a0a4b3aa3dcbfcbfeeb577cc0578",
+    "BLIND_DRAMATIC_AUDIT_R1.0_RAW.json": "09162a5c375b389e887a230792a5bc58542e329f0e63b8d0fee999f24aa9883f",
+    "BLIND_DRAMATIC_REGRESSION_R1.0_RAW.md": "f846749dafdbd3f7cb96d249edff63379e579010ed36e951e7706c553bd7a30d",
+    "BLIND_DRAMATIC_REGRESSION_R1.0_RAW.json": "5a6f2464ee42559ac69486b49899fb2c54b17e79a06645a2f9ad6941930897b4",
+    "ORIGINAL_FOUR_CHAPTER_DRAMATIC_AUDIT_R1.0_RAW.md": "fad6ea353c917a47aaa701d39b522689de8b9a480983cb02ca6fc20b35257345",
+    "ORIGINAL_FOUR_CHAPTER_DRAMATIC_AUDIT_R1.0_RAW.json": "c0408c78304b3e261a1cc46cefcf7477b0a5c5001015a91a9823e5261435917e"
+  },
+  "publication_transform": "Only replace machine-specific input paths with repository provenance paths and normalize UTF-8 line endings. Original raw files remain unchanged locally. No verdict, evidence, analysis or rule changes.",
+  "run_manifests": {
+    "A1": {
+      "run_id": "2026-10-08-di-r1.0-a1",
+      "policy_id": "DRAMATIC_INTEGRITY_R1.1_CANDIDATE",
+      "source_baseline": "0acdd3e431613fcfccfd4152d62f801a72be71b1",
+      "policy_sha256": "b587e1bca56bc07c2c699f545b3ae1ca68d05e9e4602673071ee5c94d434b04f",
+      "original_cases_sha256": "ee20e5e80550234fe1e072f200d2a91977fda8af72aa63cd968a7e55fa9e0282",
+      "numbered_cases_sha256": "da6121a25b8325f461c176c162e5a8339d7a6fc625ffde89af0f042f5dd1c96e",
+      "input_only": [
+        "auditor.md",
+        "cases.md"
+      ],
+      "expected_answers_provided": false,
+      "parent_history_provided": false,
+      "status": "FROZEN_BEFORE_RUN"
+    },
+    "A2": {
+      "run_id": "2026-10-08-di-r1.0-a2",
+      "type": "same-auditor-repair-and-process-regression",
+      "parent_history_provided": false,
+      "expected_answers_provided": false,
+      "input_sha256": {
+        "auditor.md": "b587e1bca56bc07c2c699f545b3ae1ca68d05e9e4602673071ee5c94d434b04f",
+        "AUDIT_RECORD.md": "d43b599964d3a91ca47cbac56774d2cdc63f104076a5ad25bc42d308a28bccc7",
+        "VALIDATION_PROTOCOL.md": "b1bc6ace121c841fd04fb951b281f363b52d48874ebdfa2b2adfbe08173bf469",
+        "BLIND_DRAMATIC_AUDIT_PROTOCOL_R1.0.md": "a2c2d93a10e18de93d7cfda7ad2ae8576f19ecb583f4d333d57e9738d67fe3c0",
+        "D06_R1.1.md": "20875d2a18291c434bf01d1410c56a96b331017ec1323e8eb5f8629a36a9ab48",
+        "PROCESS_CASES_R1.0.md": "8d0d85cf9428fbc1cb9c9b8b409b15f406635236688983f43c6492d36d7f0614"
+      },
+      "expected_outcomes_before_run": {
+        "D06_R1.1": "PASS",
+        "Q01": "NOT_CLOSED",
+        "Q02": "INPUT_CONTAMINATED / NOT_CLOSED",
+        "Q03": "closure predicate true in fixture only",
+        "Q04": "QA_OVERRIDE, not QA_PASS"
+      }
+    },
+    "A3": {
+      "run_id": "2026-10-08-di-r1.0-a3",
+      "expected_labels": null,
+      "inputs": [
+        {
+          "id": "C01",
+          "source_commit": "2694f2aa0b427ab8abdfd3548c514abf774ed8d3",
+          "source_path": "08_V1_3_PRODUCTION/CHAPTER_01_DRAFT_R1.0.md",
+          "numbered_sha256": "989f3dd1e6b6322fc3d66193bad1190b0fb9ef4e5866bcdcdadc3160af86ecd9"
+        },
+        {
+          "id": "C02",
+          "source_commit": "2694f2aa0b427ab8abdfd3548c514abf774ed8d3",
+          "source_path": "08_V1_3_PRODUCTION/CHAPTER_02_DRAFT_R1.0.md",
+          "numbered_sha256": "a2290e948b1dc57e9ac9ed70768ad7df1b34e1b824f94071fdb6497593fa7d47"
+        },
+        {
+          "id": "C03",
+          "source_commit": "2694f2aa0b427ab8abdfd3548c514abf774ed8d3",
+          "source_path": "08_V1_3_PRODUCTION/CHAPTER_03_DRAFT_R1.0.md",
+          "numbered_sha256": "d55c6ab50f077196ed9457654e74b23fda9cdf6c1ea3535511271b5d89fb068b"
+        },
+        {
+          "id": "C04",
+          "source_commit": "2694f2aa0b427ab8abdfd3548c514abf774ed8d3",
+          "source_path": "08_V1_3_PRODUCTION/CHAPTER_04_DRAFT_R1.0.md",
+          "numbered_sha256": "ff2df6c957574de33c85b513a90a741bb84eb7da74dbcddca58648f09c8afbf0"
+        }
+      ]
+    }
+  },
+  "summary": {
+    "synthetic_label_matches": 10,
+    "synthetic_total": 10,
+    "target_failures_identified": 7,
+    "repair": "Dramatic PASS only",
+    "process_cases": 4,
+    "organic": [
+      {
+        "id": "C01",
+        "verdict": "PASS",
+        "paragraphs": 303,
+        "scenes": 4,
+        "coverage": "COMPLETE"
+      },
+      {
+        "id": "C02",
+        "verdict": "REJECT",
+        "paragraphs": 210,
+        "scenes": 6,
+        "coverage": "COMPLETE"
+      },
+      {
+        "id": "C03",
+        "verdict": "PASS",
+        "paragraphs": 258,
+        "scenes": 2,
+        "coverage": "COMPLETE"
+      },
+      {
+        "id": "C04",
+        "verdict": "REVISE",
+        "paragraphs": 155,
+        "scenes": 2,
+        "coverage": "COMPLETE"
+      }
+    ],
+    "method": "REVISE_BEFORE_FULL_ADOPTION"
+  },
+  "proposed_boundary_revision": "R1.2 is proposed only, not applied or tested",
+  "production_qa_pass": false,
+  "issue_closed": false
+}

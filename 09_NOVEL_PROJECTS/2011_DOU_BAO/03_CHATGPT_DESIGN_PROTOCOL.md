@@ -119,3 +119,14 @@ Gemini 负责：
 
 Gemini 若不同意结构，不应偷偷修改。
 应提出 `STRUCTURAL DEVIATION REQUEST`。
+## 章节戏剧验收与关闭
+
+本项目正文审查必须执行：
+- ../../05_RED_TEAM/DRAMATIC_INTEGRITY_AUDITOR.md 的七项验收与完整场景覆盖；
+- ../../07_VALIDATION/BLIND_DRAMATIC_AUDIT_PROTOCOL_R1.0.md 的独立正文审查与冻结；
+- ../../07_VALIDATION/AUDIT_RECORD.md 的 Chapter Closure Record；
+- ../../07_VALIDATION/VALIDATION_PROTOCOL.md 的 Chapter Closure Gate。
+
+Writer Skill 的自检、模块场景检查和 HANDOFF-CANDIDATE 不替代独立 Dramatic PASS。
+不完美回答、生活动作、沉默或一个具体物件，不能单独证明策略、反转、代价或下一问题成立。
+允许试写仍保持 PILOT / WORKING；通过局部检查不意味着 Canon 锁定或正文量产获准。

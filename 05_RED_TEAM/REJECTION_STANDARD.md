@@ -1,6 +1,8 @@
 # Rejection Standard
 
-REJECT 不是“我不喜欢”，而是证明当前版本无法在现有因果、人物或连续性约束下成立。
+REJECT 不是“我不喜欢”，而是有证据证明当前版本违反因果、人物、连续性约束，或其核心戏剧功能无法成立。
+
+独立戏剧缺陷按 DRAMATIC_INTEGRITY_AUDITOR.md 判定，不要求先证明逻辑错误。局部阻断性缺陷进入 REVISE；主导全章或摧毁核心戏剧功能的缺陷进入 REJECT。缺证据使用检查状态 INCOMPLETE 并保持未关闭，不编造 FATAL/HIGH。
 
 ## Immediate Reject
 
